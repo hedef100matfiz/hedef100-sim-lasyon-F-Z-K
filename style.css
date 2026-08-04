@@ -241,4 +241,38 @@ a.sim-card:hover .sim-arrow {
     .portal-header h1 { font-size: 2.5rem; }
     .sim-grid { grid-template-columns: 1fr; }
     body { padding: 30px 15px; }
+    
+    .category-title, .grade-title, .section-title h2 {
+        font-size: 1.5rem;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .portal-header h1 { font-size: 2rem; }
+    .portal-header p { font-size: 1.1rem; }
+    
+    .sim-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 24px 20px;
+        gap: 15px;
+    }
+    
+    .sim-icon {
+        margin: 0 auto;
+    }
+    
+    .sim-arrow {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        opacity: 0.5;
+    }
+    
+    a.sim-card:hover .sim-arrow {
+        transform: translateY(5px) translateX(0); /* point down slightly or just reset */
+    }
 }
