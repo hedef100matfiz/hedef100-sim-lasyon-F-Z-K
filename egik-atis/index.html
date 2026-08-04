@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İki Boyutta Hareket (Eğik Atış)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <nav class="top-nav">
+        <a href="../index.html" class="back-link"><i data-lucide="arrow-left"></i> Portala Dön</a>
+        <div class="logo">
+            <i data-lucide="atom"></i>
+            <span>antigravity</span>
+        </div>
+    </nav>
+
+    <div class="app-container">
+        <header class="app-header">
+            <h1>İki Boyutta Hareket (Eğik Atış ve Hava Sürtünmesi)</h1>
+            <p>Hava sürtünmeli ortamda balistik yörüngeleri, anlık hız vektörlerini ve limit hızın etkilerini inceleyin.</p>
+        </header>
+
+        <main class="main-grid">
+            
+            <!-- Left: Controls -->
+            <section class="panel controls-panel">
+                <h2><i data-lucide="sliders-horizontal"></i> Atış Parametreleri</h2>
+                
+                <div class="controls-content">
+                    
+                    <div class="slider-group">
+                        <label>Atılma Hızı (v₀): <span id="v0Label">40</span> m/s</label>
+                        <input type="range" id="v0Input" min="10" max="100" step="1" value="40">
+                    </div>
+
+                    <div class="slider-group">
+                        <label>Atılma Açısı (α): <span id="alphaLabel">45</span>°</label>
+                        <input type="range" id="alphaInput" min="0" max="90" step="1" value="45">
+                    </div>
+
+                    <div class="slider-group">
+                        <label>Başlangıç Yüksekliği (h₀): <span id="h0Label">0</span> m</label>
+                        <input type="range" id="h0Input" min="0" max="50" step="1" value="0">
+                    </div>
+                    
+                    <div class="slider-group">
+                        <label>Yerçekimi İvmesi (g): <span id="gLabel">9.8</span> m/s²</label>
+                        <input type="range" id="gInput" min="1.0" max="25.0" step="0.1" value="9.8">
+                    </div>
+
+                    <hr class="divider">
+
+                    <div class="toggle-group">
+                        <button id="btnDragOff" class="drag-btn active">SÜRTÜNME KAPALI</button>
+                        <button id="btnDragOn" class="drag-btn">SÜRTÜNME AÇIK</button>
+                    </div>
+
+                    <div class="slider-group" id="dragControl" style="opacity: 0.3; pointer-events: none;">
+                        <label>Sürtünme Katsayısı (k): <span id="kLabel">0.15</span></label>
+                        <input type="range" id="kInput" min="0.01" max="0.5" step="0.01" value="0.15">
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="action-grid">
+                        <button id="btnFire" class="action-btn fire"><i data-lucide="crosshair"></i> ATEŞLE</button>
+                        <button id="btnReset" class="action-btn reset"><i data-lucide="refresh-cw"></i> SIFIRLA</button>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Center: Visuals -->
+            <section class="panel visual-panel">
+                <h2><i data-lucide="target"></i> Balistik Atış Alanı</h2>
+                
+                <div class="simulation-area">
+                    <canvas id="simCanvas" width="800" height="400"></canvas>
+                    
+                    <!-- Optional HTML overlays for dynamic labels if needed, 
+                         but drawing labels on canvas is smoother for vectors -->
+                </div>
+            </section>
+
+            <!-- Right: Analysis -->
+            <section class="panel analysis-panel">
+                <h2><i data-lucide="bar-chart-2"></i> Hareket Analizi</h2>
+                
+                <div class="analysis-content">
+                    
+                    <div class="data-compare">
+                        <div class="data-col ideal">
+                            <div class="col-title">İDEAL (Sürtünmesiz)</div>
+                            <div class="data-item">
+                                <span>Maks Yükseklik (H_max)</span>
+                                <strong id="idealH">-- m</strong>
+                            </div>
+                            <div class="data-item">
+                                <span>Yatay Menzil (X_max)</span>
+                                <strong id="idealX">-- m</strong>
+                            </div>
+                        </div>
+                        <div class="data-col real">
+                            <div class="col-title">GERÇEK (Sürtünmeli)</div>
+                            <div class="data-item">
+                                <span>Maks Yükseklik (H_max)</span>
+                                <strong id="realH">-- m</strong>
+                            </div>
+                            <div class="data-item">
+                                <span>Yatay Menzil (X_max)</span>
+                                <strong id="realX">-- m</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chart-card">
+                        <div class="chart-title">Hız - Zaman Grafiği (v_x, v_y)</div>
+                        <canvas id="chartCanvas" width="300" height="150"></canvas>
+                        <div class="chart-legend">
+                            <div class="c-item"><div class="c-color" style="background:#0ea5e9"></div> v_x (Yatay)</div>
+                            <div class="c-item"><div class="c-color" style="background:#22c55e"></div> v_y (Düşey)</div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <i data-lucide="info"></i>
+                        <p><strong>Hava Sürtünmesi</strong>, hızın karesiyle doğru orantılı olarak harekete ters yönde etki eder. Yatay hızın ($v_x$) sıfırlanmasına ve asimetrik bir yörüngeye neden olur.</p>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

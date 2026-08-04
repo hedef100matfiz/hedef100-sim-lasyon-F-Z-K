@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enerji Dönüşüm Parkuru</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <nav class="top-nav">
+        <a href="../index.html" class="back-link"><i data-lucide="arrow-left"></i> Portala Dön</a>
+        <div class="logo">
+            <i data-lucide="atom"></i>
+            <span>antigravity</span>
+        </div>
+    </nav>
+
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Enerji Dönüşüm Parkuru</h1>
+            <p>Mekanik enerjinin korunumu ve sürtünme ile ısıya dönüşümü simülasyonu.</p>
+        </header>
+
+        <main class="main-grid">
+            <!-- Left: Canvas -->
+            <section class="panel visual-panel">
+                <h2><i data-lucide="zap"></i> Dinamik Simülasyon Parkuru</h2>
+                <div class="canvas-container">
+                    <canvas id="simCanvas" width="800" height="400"></canvas>
+                </div>
+                <div class="canvas-footer">
+                    <div class="legend-item"><span class="dot blue"></span>Kavisli Rampa (Sürtünmesiz)</div>
+                    <div class="legend-item"><span class="dot red"></span>Yatay Düzlem (Sürtünmeli)</div>
+                    <div class="legend-item"><span class="dot green"></span>Yay (Esnek Çarpışma)</div>
+                </div>
+            </section>
+
+            <!-- Right: Bar Charts -->
+            <section class="panel chart-panel">
+                <h2><i data-lucide="bar-chart-2"></i> Enerji Bütçesi (J)</h2>
+                <div class="bars-container">
+                    
+                    <div class="bar-col">
+                        <div class="bar-wrapper">
+                            <div class="bar-fill bg-green" id="barK" style="height: 0%;"></div>
+                        </div>
+                        <div class="bar-val" id="valK">0 J</div>
+                        <div class="bar-label">Kinetik (K)</div>
+                    </div>
+                    
+                    <div class="bar-col">
+                        <div class="bar-wrapper">
+                            <div class="bar-fill bg-blue" id="barU" style="height: 0%;"></div>
+                        </div>
+                        <div class="bar-val" id="valU">0 J</div>
+                        <div class="bar-label">Potansiyel (U)</div>
+                    </div>
+
+                    <div class="bar-col">
+                        <div class="bar-wrapper">
+                            <div class="bar-fill bg-red" id="barW" style="height: 0%;"></div>
+                        </div>
+                        <div class="bar-val" id="valW">0 J</div>
+                        <div class="bar-label">Isı (W)</div>
+                    </div>
+
+                    <div class="bar-col">
+                        <div class="bar-wrapper total-wrapper">
+                            <div class="bar-fill bg-gray" id="barE" style="height: 0%;"></div>
+                        </div>
+                        <div class="bar-val" id="valE">0 J</div>
+                        <div class="bar-label">Toplam (E)</div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Bottom: Controls -->
+            <section class="panel controls-panel full-width">
+                <h2><i data-lucide="sliders-horizontal"></i> Kullanıcı Değişkenleri</h2>
+                
+                <div class="controls-content">
+                    <div class="slider-group">
+                        <label>İlk Yükseklik (h₀): <span id="h0Label">10</span> m</label>
+                        <input type="range" id="h0Input" min="0" max="10" step="0.5" value="10">
+                    </div>
+                    
+                    <div class="slider-group">
+                        <label>Atılma Hızı (v₀): <span id="v0Label">0</span> m/s</label>
+                        <input type="range" id="v0Input" min="0" max="10" step="0.5" value="0">
+                    </div>
+
+                    <div class="slider-group">
+                        <label>Yüzey Sürtünmesi (μ): <span id="muLabel">0.2</span></label>
+                        <input type="range" id="muInput" min="0.0" max="1.0" step="0.05" value="0.2">
+                    </div>
+
+                    <div class="slider-group">
+                        <label>Yay Sabiti (k): <span id="kLabel">200</span> N/m</label>
+                        <input type="range" id="kInput" min="50" max="500" step="10" value="200">
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button id="btnStart" class="btn btn-primary"><i data-lucide="play"></i> SİMÜLASYONU BAŞLAT</button>
+                    <button id="btnStop" class="btn btn-secondary" disabled><i data-lucide="pause"></i> DURDUR</button>
+                    <button id="btnReset" class="btn btn-danger"><i data-lucide="rotate-ccw"></i> BAŞA SAR</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

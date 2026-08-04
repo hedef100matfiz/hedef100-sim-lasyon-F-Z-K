@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tork, Denge ve Kütle Merkezi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <nav class="top-nav">
+        <a href="../index.html" class="back-link"><i data-lucide="arrow-left"></i> Portala Dön</a>
+        <div class="logo">
+            <i data-lucide="atom"></i>
+            <span>antigravity</span>
+        </div>
+    </nav>
+
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Tork, Denge ve Kütle Merkezi</h1>
+            <p>Kuvvet vektörlerini, destek tepkilerini hesaplayın ve sistemin statik limitlerindeki devrilme anlarını görselleştirin.</p>
+        </header>
+
+        <main class="main-grid">
+            
+            <!-- Left: Controls -->
+            <section class="panel controls-panel">
+                <h2><i data-lucide="sliders-horizontal"></i> Sistem Parametreleri</h2>
+                
+                <div class="controls-content">
+                    
+                    <div class="toggle-group">
+                        <button id="btnDestek" class="mode-btn active">DESTEKLİ SİSTEM</button>
+                        <button id="btnIp" class="mode-btn">İPLİ SİSTEM</button>
+                    </div>
+
+                    <div class="slider-group mt-3">
+                        <label>Çubuk Ağırlığı (G): <span id="gLabel">40</span> N</label>
+                        <input type="range" id="gInput" min="0" max="100" step="5" value="40">
+                    </div>
+
+                    <div class="slider-group">
+                        <label>Sol Destek/İp (x₁): <span id="x1Label">2</span>. Birim</label>
+                        <input type="range" id="x1Input" min="0" max="4" step="0.5" value="2">
+                    </div>
+
+                    <div class="slider-group">
+                        <label>Sağ Destek/İp (x₂): <span id="x2Label">8</span>. Birim</label>
+                        <input type="range" id="x2Input" min="5" max="10" step="0.5" value="8">
+                    </div>
+
+                    <hr class="divider">
+
+                    <div class="slider-group">
+                        <label>Ek Yük Kütlesi (m_yük): <span id="mLabel">2</span> kg</label>
+                        <input type="range" id="mInput" min="0" max="20" step="1" value="2">
+                    </div>
+
+                    <div class="slider-group">
+                        <label>Ek Yük Konumu (x_yük): <span id="xyukLabel">6</span>. Birim</label>
+                        <input type="range" id="xyukInput" min="0" max="10" step="0.1" value="6">
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Center: Visuals -->
+            <section class="panel visual-panel">
+                <h2><i data-lucide="scale"></i> Statik Laboratuvarı</h2>
+                
+                <div class="simulation-area">
+                    <canvas id="simCanvas" width="800" height="400"></canvas>
+                </div>
+            </section>
+
+            <!-- Right: Analysis -->
+            <section class="panel analysis-panel">
+                <h2><i data-lucide="cpu"></i> Gerilme Analizi</h2>
+                
+                <div class="analysis-content">
+                    
+                    <div class="force-displays">
+                        <div class="force-card">
+                            <div class="f-title" id="lblN1">Sol Destek (N₁)</div>
+                            <div class="f-val" id="valN1">-- N</div>
+                        </div>
+                        <div class="force-card">
+                            <div class="f-title" id="lblN2">Sağ Destek (N₂)</div>
+                            <div class="f-val" id="valN2">-- N</div>
+                        </div>
+                    </div>
+
+                    <div class="status-card" id="statusCard">
+                        <div class="s-icon" id="statusIcon"><i data-lucide="check-circle"></i></div>
+                        <div class="s-text" id="statusText">SİSTEM DENGEDE</div>
+                    </div>
+
+                    <div class="info-card">
+                        <i data-lucide="info"></i>
+                        <p>Kütle Merkezi çubuğun tam ortasıdır (5. Birim). Devrilme yaşandığında denge bozulur ve destek/ip kuvvetlerinden biri sıfırlanır, diğeri tüm yükü üstlenir.</p>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

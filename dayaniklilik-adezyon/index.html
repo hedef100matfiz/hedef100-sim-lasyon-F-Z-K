@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dayanıklılık, Adezyon ve Kohezyon</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Top Nav to go back -->
+    <nav class="top-nav">
+        <a href="../index.html" class="back-link"><i data-lucide="arrow-left"></i> Portala Dön</a>
+        <div class="logo">
+            <i data-lucide="atom"></i>
+            <span>antigravity</span>
+        </div>
+    </nav>
+
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Dayanıklılık, Adezyon ve Kohezyon</h1>
+            <p>Katıların dayanıklılığı ve sıvıların kılcallık özelliklerini (adezyon/kohezyon) inceleyin.</p>
+        </header>
+
+        <main class="main-grid">
+            <!-- Left Section: Dayanıklılık -->
+            <section class="panel">
+                <h2><i data-lucide="cylinder"></i> Dayanıklılık Simülasyonu</h2>
+                
+                <div class="panel-content">
+                    <div class="controls-col">
+                        <h3>Kullanıcı Değişkenleri (Girdiler)</h3>
+                        
+                        <div class="input-group">
+                            <label>Cisim Türü</label>
+                            <select id="shapeType">
+                                <option value="cylinder">Silindir</option>
+                                <option value="cube">Küp (Prizma)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="slider-group">
+                            <label>Yarıçap / Kenar (r): <span id="rLabel">2.50</span> cm</label>
+                            <input type="range" id="radiusInput" min="1.0" max="10.0" step="0.1" value="2.5">
+                        </div>
+
+                        <div class="slider-group">
+                            <label>Yükseklik (h): <span id="hLabel">10.00</span> cm</label>
+                            <input type="range" id="heightInput" min="1.0" max="20.0" step="0.1" value="10.0">
+                        </div>
+                    </div>
+
+                    <div class="visual-col">
+                        <div class="shape-container">
+                            <!-- CSS 3D Shape -->
+                            <div id="shapeVisual" class="shape cylinder"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-col">
+                    <h3>Sistem Çıktısı (Sonuç)</h3>
+                    <div class="result-card purple-highlight">
+                        <div class="result-value" id="dayaniklilikValue">0.10 <small>cm⁻¹</small></div>
+                        <div class="result-label">Dayanıklılık Oranı (K.Alanı / Hacim)</div>
+                    </div>
+                    <div class="info-text" id="dayaniklilikInfo">Yükseklik arttıkça, kendi ağırlığına karşı dayanıklılık azalır. (D ∝ 1/h)</div>
+                    
+                    <div class="graph-wrapper">
+                        <canvas id="dayaniklilikChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Section: Adezyon & Kohezyon -->
+            <section class="panel">
+                <h2><i data-lucide="droplets"></i> Adezyon ve Kohezyon (Kılcallık)</h2>
+                
+                <div class="panel-content">
+                    <div class="controls-col">
+                        <h3>Kullanıcı Değişkenleri (Girdiler)</h3>
+                        
+                        <div class="input-group">
+                            <label>Sıvı Türü</label>
+                            <select id="liquidType">
+                                <option value="water">Su (Adezyon > Kohezyon)</option>
+                                <option value="mercury">Cıva (Kohezyon > Adezyon)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="slider-group">
+                            <label>Kılcal Boru Yarıçapı (r): <span id="capRadiusLabel">1.0</span> mm</label>
+                            <input type="range" id="capRadiusInput" min="0.2" max="3.0" step="0.1" value="1.0">
+                        </div>
+                    </div>
+
+                    <div class="visual-col">
+                        <div class="capillary-container">
+                            <div class="basin" id="basinVisual">
+                                <div class="basin-liquid"></div>
+                            </div>
+                            <div class="tube" id="tubeVisual">
+                                <div class="tube-liquid" id="tubeLiquidVisual"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-col">
+                    <h3>Sistem Çıktısı (Sonuç)</h3>
+                    <div class="result-card blue-highlight" id="capillaryResultCard">
+                        <div class="result-value" id="capillaryValue">+14.50 <small>mm</small></div>
+                        <div class="result-label">Sıvının Yükselme Miktarı (h)</div>
+                    </div>
+                    <div class="info-text" id="capillaryInfo">Yükselme: Adezyon > Kohezyon. Kesit daraldıkça daha çok yükselir.</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

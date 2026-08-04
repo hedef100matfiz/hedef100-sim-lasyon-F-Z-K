@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elektroskop ve Elektriklenme</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <nav class="top-nav">
+        <a href="../index.html" class="back-link"><i data-lucide="arrow-left"></i> Portala Dön</a>
+        <div class="logo">
+            <i data-lucide="atom"></i>
+            <span>antigravity</span>
+        </div>
+    </nav>
+
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Elektroskop ve Dokunma ile Elektriklenme</h1>
+            <p>İletken küreler arası yük alışverişini ve elektroskop yapraklarının tepkisini inceleyin.</p>
+        </header>
+
+        <main class="main-grid">
+            
+            <!-- Left: Controls -->
+            <section class="panel controls-panel">
+                <h2><i data-lucide="sliders-horizontal"></i> Kullanıcı Değişkenleri</h2>
+                
+                <div class="controls-content">
+                    <div class="slider-group">
+                        <label>1. Küre Yarıçapı (r₁): <span id="r1Label">1</span>r</label>
+                        <input type="range" id="r1Input" min="1" max="5" step="1" value="1">
+                    </div>
+                    <div class="slider-group">
+                        <label>2. Küre Yarıçapı (r₂): <span id="r2Label">2</span>r</label>
+                        <input type="range" id="r2Input" min="1" max="5" step="1" value="2">
+                    </div>
+
+                    <div class="slider-group">
+                        <label>1. Küre Yükü (q₁): <span id="q1Label">+4</span>q</label>
+                        <input type="range" id="q1Input" min="-10" max="10" step="1" value="4">
+                    </div>
+                    <div class="slider-group">
+                        <label>2. Küre Yükü (q₂): <span id="q2Label">-2</span>q</label>
+                        <input type="range" id="q2Input" min="-10" max="10" step="1" value="-2">
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button id="btnAction" class="btn btn-primary"><i data-lucide="move-horizontal"></i> DOKUNDUR</button>
+                    <button id="btnReset" class="btn btn-secondary"><i data-lucide="rotate-ccw"></i> SIFIRLA</button>
+                </div>
+            </section>
+
+            <!-- Center: Visuals -->
+            <section class="panel visual-panel">
+                <h2><i data-lucide="zap"></i> Etkileşimli Deney Alanı</h2>
+                
+                <div class="experiment-area">
+                    <!-- Spheres -->
+                    <div class="spheres-container">
+                        <div class="sphere-assembly" id="assembly1">
+                            <div class="sphere" id="sphere1"></div>
+                            <div class="stand"></div>
+                            <div class="base"></div>
+                            <div class="sphere-label">1. Küre</div>
+                        </div>
+
+                        <div class="sphere-assembly" id="assembly2">
+                            <div class="sphere" id="sphere2"></div>
+                            <div class="stand"></div>
+                            <div class="base"></div>
+                            <div class="sphere-label">2. Küre</div>
+                        </div>
+                    </div>
+
+                    <!-- Electroscope (Connected to Sphere 2) -->
+                    <div class="electroscope-container">
+                        <div class="wire" id="wire"></div>
+                        <div class="jar">
+                            <div class="stopper"></div>
+                            <div class="rod"></div>
+                            <div class="leaf left" id="leafLeft"></div>
+                            <div class="leaf right" id="leafRight"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right: Analysis -->
+            <section class="panel analysis-panel">
+                <h2><i data-lucide="bar-chart-2"></i> Sistem Çıktısı</h2>
+                
+                <div class="analysis-content">
+                    
+                    <div class="status-card">
+                        <h3>Elektroskop (2. Küre) Durumu</h3>
+                        <div class="status-text" id="statusText">Dengede (Bekleniyor)</div>
+                    </div>
+
+                    <div class="angle-display">
+                        <div class="angle-icon">θ</div>
+                        <div class="angle-text" id="angleText">Açı: 30°</div>
+                    </div>
+
+                    <div class="graph-container">
+                        <canvas id="chargeChart"></canvas>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

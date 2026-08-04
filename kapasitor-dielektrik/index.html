@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sığa (Kapasitör) ve Dielektrik</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <nav class="top-nav">
+        <a href="../index.html" class="back-link"><i data-lucide="arrow-left"></i> Portala Dön</a>
+        <div class="logo">
+            <i data-lucide="atom"></i>
+            <span>antigravity</span>
+        </div>
+    </nav>
+
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Düzgün Elektrik Alan, Sığa ve Dielektrik</h1>
+            <p>Paralel levhaların sığasını, yalıtkan (dielektrik) maddelerin polarizasyonunu ve depolanan enerjiyi interaktif olarak inceleyin.</p>
+        </header>
+
+        <main class="main-grid">
+            
+            <!-- Left: Controls -->
+            <section class="panel controls-panel">
+                <h2><i data-lucide="sliders-horizontal"></i> Sistem Parametreleri</h2>
+                
+                <div class="controls-content">
+                    
+                    <div class="slider-group">
+                        <label>Levhalar Arası Uzaklık (d): <span id="dLabel">5</span> mm</label>
+                        <input type="range" id="dInput" min="2" max="15" step="0.5" value="5">
+                    </div>
+
+                    <div class="slider-group">
+                        <label>Yüzey Alanı (A): <span id="aLabel">100</span> cm²</label>
+                        <input type="range" id="aInput" min="10" max="500" step="10" value="100">
+                    </div>
+
+                    <div class="slider-group">
+                        <label>Uygulanan Gerilim (V): <span id="vLabel">12</span> Volt</label>
+                        <input type="range" id="vInput" min="1" max="24" step="1" value="12">
+                    </div>
+
+                    <hr class="divider">
+
+                    <div class="dropdown-group">
+                        <label>Dielektrik Madde (Yalıtkan)</label>
+                        <select id="kSelect" class="styled-select">
+                            <option value="1.0">Hava (κ = 1.0)</option>
+                            <option value="3.7">Kağıt (κ = 3.7)</option>
+                            <option value="5.6" selected>Cam (κ = 5.6)</option>
+                            <option value="7.0">Mika (κ = 7.0)</option>
+                            <option value="80.0">Saf Su (κ = 80.0)</option>
+                        </select>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Center: Visuals -->
+            <section class="panel visual-panel">
+                <h2><i data-lucide="layers"></i> Kapasitör Düzlemi</h2>
+                
+                <div class="simulation-area">
+                    <canvas id="simCanvas" width="800" height="400"></canvas>
+                    <div class="hint-text">Camgöbeği (Cyan) yalıtkan bloğu farenizle sürükleyerek levhaların arasına sokabilirsiniz.</div>
+                </div>
+            </section>
+
+            <!-- Right: Analysis -->
+            <section class="panel analysis-panel">
+                <h2><i data-lucide="battery-charging"></i> Elektriksel Analiz</h2>
+                
+                <div class="analysis-content">
+                    
+                    <div class="sensor-card">
+                        <div class="s-title">Sığa (C)</div>
+                        <div class="s-val" id="valC">0.0 <span class="unit">pF</span></div>
+                    </div>
+
+                    <div class="sensor-card">
+                        <div class="s-title">Depolanan Yük (Q)</div>
+                        <div class="s-val" id="valQ">0.0 <span class="unit">pC</span></div>
+                    </div>
+
+                    <div class="energy-card">
+                        <div class="s-title">Depolanan Enerji (U)</div>
+                        <div class="s-val" id="valU">0.0 <span class="unit">pJ</span></div>
+                        <div class="battery-container">
+                            <div class="battery-body">
+                                <div class="battery-level" id="batteryLevel" style="height: 0%;"></div>
+                            </div>
+                            <div class="battery-cap"></div>
+                        </div>
+                    </div>
+
+                    <div class="info-card mt-auto">
+                        <i data-lucide="info"></i>
+                        <p>Dielektrik madde girdiğinde sistem <strong>iki paralel kondansatör</strong> gibi davranır. Elektrik alan yalıtkanın içinde zayıflar (polarizasyon) ve Sığa (C) artar.</p>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akımın Manyetik Etkisi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <nav class="top-nav">
+        <a href="../index.html" class="back-link"><i data-lucide="arrow-left"></i> Portala Dön</a>
+        <div class="logo">
+            <i data-lucide="atom"></i>
+            <span>antigravity</span>
+        </div>
+    </nav>
+
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Akımın Manyetik Etkisi (Sağ El Kuralı)</h1>
+            <p>Düz iletken telin etrafında oluşan manyetik alanı ve yönünü 3D izometrik perspektifle inceleyin.</p>
+        </header>
+
+        <main class="main-grid">
+            
+            <!-- Left: Controls -->
+            <section class="panel controls-panel">
+                <h2><i data-lucide="sliders-horizontal"></i> Kullanıcı Değişkenleri</h2>
+                
+                <div class="controls-content">
+                    <div class="slider-group">
+                        <label>Akım Şiddeti (I): <span id="iLabel">10</span> A</label>
+                        <input type="range" id="iInput" min="1" max="20" step="1" value="10">
+                    </div>
+                    
+                    <div class="slider-group">
+                        <label>Uzaklık (d): <span id="dLabel">5</span> cm</label>
+                        <input type="range" id="dInput" min="1" max="10" step="0.5" value="5">
+                    </div>
+                </div>
+
+                <div class="switch-container">
+                    <div class="switch-label">Akım Yönü</div>
+                    <button id="btnDir" class="dir-btn up">
+                        <div class="dir-icon"><i data-lucide="arrow-up"></i></div>
+                        <span class="dir-text">+y (YUKARI)</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Center: Visuals -->
+            <section class="panel visual-panel">
+                <h2><i data-lucide="box"></i> Holografik 3D Simülasyon</h2>
+                
+                <div class="simulation-area">
+                    <canvas id="simCanvas" width="400" height="400"></canvas>
+                    
+                    <!-- Holographic Right Hand SVG -->
+                    <div class="hand-overlay" id="handOverlay">
+                        <svg viewBox="0 0 100 100" width="100%" height="100%">
+                            <g stroke="#22c55e" stroke-width="2" fill="rgba(34,197,94,0.1)" stroke-linecap="round" stroke-linejoin="round">
+                                <!-- Base Palm -->
+                                <path d="M40 30 L60 30 L65 70 L35 70 Z"/>
+                                <!-- Thumb (pointing UP) -->
+                                <path d="M40 30 L40 10 L30 10 L30 30 Z" fill="rgba(59,130,246,0.3)" stroke="#3b82f6"/> 
+                                <!-- Thumb Arrow (I) -->
+                                <path d="M35 25 L35 15 M32 18 L35 12 L38 18" stroke="#3b82f6" fill="none"/>
+                                <!-- 4 Fingers curling (B field) -->
+                                <!-- Index -->
+                                <path d="M42 30 C55 30, 65 35, 65 45 C65 50, 50 50, 42 45"/>
+                                <!-- Middle -->
+                                <path d="M43 45 C58 45, 68 50, 68 60 C68 65, 52 65, 43 60"/>
+                                <!-- Ring -->
+                                <path d="M45 60 C55 60, 62 65, 62 72 C62 77, 48 77, 45 72"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right: Analysis -->
+            <section class="panel analysis-panel">
+                <h2><i data-lucide="calculator"></i> Sistem Çıktısı</h2>
+                
+                <div class="analysis-content">
+                    <div class="formula-card">
+                        <div class="formula">B = 2k · (I / d)</div>
+                        <div class="constant">k = 10⁻⁷ T·m/A</div>
+                    </div>
+
+                    <div class="result-display">
+                        <div class="result-label">Manyetik Alan Şiddeti (B)</div>
+                        <div class="result-value" id="bResult">4.0 × 10⁻⁵</div>
+                        <div class="result-unit">Tesla (T)</div>
+                    </div>
+                    
+                    <div class="compass-legend">
+                        <i data-lucide="compass"></i> Pusula Vektörü (B) anlık olarak teğettir.
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
