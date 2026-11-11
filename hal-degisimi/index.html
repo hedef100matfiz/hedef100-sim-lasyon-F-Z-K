@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isıtma ve Hâl Değişimi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="../vendor/fonts.css" rel="stylesheet">
+    <script src="../vendor/chart.umd.js"></script>
+    <script src="../vendor/lucide.min.js"></script>
+<link rel="stylesheet" href="../shared/lab.css">
+<script src="../shared/lab.js" defer></script>
+<link rel="stylesheet" href="../shared/curriculum.css"></head>
+<body data-lab="hal-degisimi">
+    <nav class="top-nav">
+        <a href="../index.html" class="back-link"><i data-lucide="arrow-left"></i> Portala Dön</a>
+        <div class="logo">
+            <i data-lucide="atom"></i>
+            <span>Ahmet Hoca</span>
+        </div>
+    </nav>
+
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Isıtma ve Hâl Değişimi</h1>
+            <p>Maddenin ısı alarak geçirdiği hal değişim evrelerini ve termodinamik grafiğini makro/mikro düzeyde inceleyin.</p>
+        </header><section class="curriculum-meta" data-module-id="hal-degisimi" data-module-type="sanal-deney" data-curriculum-status="dogrudan" aria-label="Sınıf ve program kullanım bilgisi"><div class="curriculum-meta-heading"><h2>Sınıf ve program kullanımı</h2><span class="curriculum-type">Sanal deney</span></div><p class="curriculum-status-line"><strong>Ünite bağlantılı</strong></p><ul class="curriculum-grade-list"><li data-grade="5" data-role="dogrudan" data-level="temel"><strong>5. sınıf</strong><span>Temel düzey · doğrudan ünite bağlantısı</span></li><li data-grade="6" data-role="dogrudan" data-level="temel"><strong>6. sınıf</strong><span>Temel düzey · doğrudan ünite bağlantısı</span></li><li data-grade="9" data-role="dogrudan" data-level="ileri"><strong>9. sınıf</strong><span>İleri düzey · doğrudan ünite bağlantısı</span></li></ul><p class="curriculum-status-note">En az bir sınıf için ünite/temel konu bağlantısı vardır. Diğer sınıf etiketleri destekleyici kullanım olabilir; bu bilgi kazanım bazlı resmî uygunluk onayı değildir.</p></section>
+
+        <main class="main-grid">
+            <!-- Left: Visuals (Macro & Micro) -->
+            <section class="panel visual-panel">
+                <h2><i data-lucide="thermometer"></i> Makro ve Mikro Görünüm</h2>
+                
+                <div class="visuals-container">
+                    
+                    <!-- Macro: Beaker -->
+                    <div class="macro-view">
+                        <div class="beaker">
+                            <div class="substance" id="substanceVisual"></div>
+                            
+                            <!-- Thermometer -->
+                            <div class="thermometer">
+                                <div class="thermo-bulb"></div>
+                                <div class="thermo-tube">
+                                    <div class="thermo-fill" id="thermoFill"></div>
+                                </div>
+                            </div>
+                            <div class="thermo-label" id="tempLabel">0.0 °C</div>
+                        </div>
+                        
+                        <!-- Heater -->
+                        <div class="heater">
+                            <div class="heater-coil" id="heaterCoil"></div>
+                        </div>
+                    </div>
+
+                    <!-- Micro: Zoom-in (Canvas) -->
+                    <div class="micro-view">
+                        <div class="magnifier-glass">
+                            <canvas id="microCanvas" width="200" height="200"></canvas>
+                        </div>
+                        <div class="micro-label"><i data-lucide="zoom-in"></i> Moleküler Büyüteç</div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Right: Graph -->
+            <section class="panel graph-panel">
+                <h2><i data-lucide="activity"></i> Sıcaklık - Isı (T-Q) Grafiği</h2>
+                <div class="graph-container">
+                    <canvas id="tqChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Bottom: Controls -->
+            <section class="panel controls-panel full-width">
+                <div class="controls-header">
+                    <h2><i data-lucide="sliders-horizontal"></i> Kullanıcı Değişkenleri</h2>
+                    <div class="status-displays">
+                        <div class="status-badge phase-badge" id="phaseBadge">Katı (Buz)</div>
+                        <div class="status-badge q-badge">Toplam Isı: <strong id="qLabel">0</strong> J</div>
+                    </div>
+                </div>
+                
+                <div class="controls-content">
+                    <div class="slider-group">
+                        <label>Madde Miktarı (m): <span id="mLabel">50</span> g</label>
+                        <input type="range" id="mInput" min="10" max="200" step="10" value="50">
+                    </div>
+                    
+                    <div class="slider-group">
+                        <label>Başlangıç Sıcaklığı (T₀): <span id="t0Label">-20</span> °C</label>
+                        <input type="range" id="t0Input" min="-50" max="150" step="5" value="-20">
+                    </div>
+
+                    <div class="slider-group">
+                        <label>Isıtıcı Gücü (P): <span id="pLabel">500</span> W (J/sn)</label>
+                        <input type="range" id="pInput" min="100" max="2000" step="100" value="500">
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button id="btnStart" class="btn btn-primary"><i data-lucide="flame"></i> ISITMAYA BAŞLA</button>
+                    <button id="btnStop" class="btn btn-secondary" disabled><i data-lucide="pause"></i> DURDUR</button>
+                    <button id="btnReset" class="btn btn-danger"><i data-lucide="rotate-ccw"></i> SIFIRLA</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <details class="lab-note"><summary>Deneyin modeli ve kullanım notları</summary><p>Saf su, sabit 1 atm basınç ve çevreye ısı kaybı olmayan ideal model. 0 °C başlangıcı buz, 100 °C başlangıcı sıvı su kabul edilir. Isıtma 10× hızlandırılmıştır; sıcaklık 150 °C ile sınırlıdır. Molekül hareketleri nitel gösterimdir.</p></details>
+<script src="script.js"></script>
+</body>
+</html>

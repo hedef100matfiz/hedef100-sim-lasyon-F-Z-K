@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kepler Yasaları ve Yörünge Simülatörü</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="../vendor/fonts.css" rel="stylesheet">
+    <script src="../vendor/lucide.min.js"></script>
+<link rel="stylesheet" href="../shared/lab.css">
+<script src="../shared/lab.js" defer></script>
+<link rel="stylesheet" href="../shared/curriculum.css"></head>
+<body data-lab="kepler-yorunge">
+    <nav class="top-nav">
+        <a href="../index.html" class="back-link"><i data-lucide="arrow-left"></i> Portala Dön</a>
+        <div class="logo">
+            <i data-lucide="atom"></i>
+            <span>Ahmet Hoca</span>
+        </div>
+    </nav>
+
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Kepler Yasaları ve Yörünge</h1>
+            <p>Gezegenlerin eliptik yörüngelerini, alanlar yasasını ve kütleçekim kuvvetinin etkilerini analiz edin.</p>
+        </header><section class="curriculum-meta" data-module-id="kepler-yorunge" data-module-type="kavramsal-model" data-curriculum-status="ileri-duzey" aria-label="Sınıf ve program kullanım bilgisi"><div class="curriculum-meta-heading"><h2>Sınıf ve program kullanımı</h2><span class="curriculum-type">Kavramsal model</span></div><p class="curriculum-status-line"><strong>İleri düzey</strong></p><ul class="curriculum-grade-list"><li data-grade="12" data-role="destekleyici" data-level="ileri"><strong>12. sınıf</strong><span>İleri düzey · destekleyici kullanım</span></li></ul><p class="curriculum-status-note">Doğrudan ünite eşleştirmesi eklenmemiştir; ileri düzey kavramsal/modelleme çalışması olarak kullanılmalıdır.</p></section>
+
+        <main class="main-grid">
+            
+            <!-- Left: Controls -->
+            <section class="panel controls-panel">
+                <h2><i data-lucide="sliders-horizontal"></i> Sistem Parametreleri</h2>
+                
+                <div class="controls-content">
+                    
+                    <div class="slider-group">
+                        <label>Yıldızın Kütlesi (M): <span id="mLabel">1.0</span> M_sun</label>
+                        <input type="range" id="mInput" min="0.5" max="3.0" step="0.1" value="1.0">
+                    </div>
+
+                    <div class="slider-group">
+                        <label>Dış Merkezlik (e): <span id="eLabel">0.65</span></label>
+                        <input type="range" id="eInput" min="0.0" max="0.85" step="0.05" value="0.65">
+                    </div>
+
+                    <div class="slider-group">
+                        <label>Ortalama Uzaklık (a): <span id="aLabel">1.5</span> AU</label>
+                        <input type="range" id="aInput" min="0.5" max="2.5" step="0.1" value="1.5">
+                    </div>
+
+                    <hr class="divider">
+                    
+                    <button class="action-btn" id="btnSweepArea">
+                        <i data-lucide="pie-chart"></i> Eşit Alan Tara (Δt)
+                    </button>
+                    <button class="action-btn outline" id="btnClearArea">
+                        <i data-lucide="trash-2"></i> Alanları Temizle
+                    </button>
+
+                    <p class="mode-desc">"Eşit Alan Tara" butonuna bastığınızda gezegen eşit bir zaman dilimi boyunca (Δt) ilerler ve taradığı alanı çizer.</p>
+
+                </div>
+            </section>
+
+            <!-- Center: Visuals -->
+            <section class="panel visual-panel">
+                <h2><i data-lucide="orbit"></i> Uzay Düzlemi</h2>
+                
+                <div class="simulation-area">
+                    <canvas id="simCanvas" width="600" height="450"></canvas>
+                </div>
+                
+                <div class="legend-row">
+                    <span class="l-item v-color"><span class="l-dot"></span> Çizgisel Hız (v)</span>
+                    <span class="l-item area-color"><span class="l-dot"></span> Taranan Alan (ΔA)</span>
+                </div>
+            </section>
+
+            <!-- Right: Analysis -->
+            <section class="panel analysis-panel">
+                <h2><i data-lucide="cpu"></i> Yörünge Analizi</h2>
+                
+                <div class="analysis-content">
+                    
+                    <div class="sensor-card highlight-card">
+                        <div class="s-title">Açısal Momentum (L)</div>
+                        <div class="s-val text-neon-green">SABİT</div>
+                        <div class="s-sub">m · v · r_dik = L</div>
+                    </div>
+
+                    <div class="sensor-card highlight-card">
+                        <div class="s-title">Alan Hızı (ΔA / Δt)</div>
+                        <div class="s-val text-neon-purple">SABİT</div>
+                        <div class="s-sub">Gezegen eşit sürede eşit alan tarar</div>
+                    </div>
+
+                    <div class="sensor-card">
+                        <div class="s-title">Anlık Hız (v)</div>
+                        <div class="s-val" id="valV">0.0 <span class="unit">km/s</span></div>
+                        <div class="bar-container"><div class="bar-fill bg-yellow" id="barV"></div></div>
+                    </div>
+
+                    <div class="sensor-card">
+                        <div class="s-title">Çekim Kuvveti (F)</div>
+                        <div class="s-val" id="valF">0.0 <span class="unit">F₀</span></div>
+                        <div class="bar-container"><div class="bar-fill bg-red" id="barF"></div></div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <details class="lab-note"><summary>Deneyin modeli ve kullanım notları</summary><p>Merkez kütle Güneş kütlesi, yarı büyük eksen AU birimindedir. İki cisim yaklaşımı; gezegen kütlesi merkez kütleden çok küçüktür. Hareket Kepler denklemiyle ilerler. Eşit süre taramaları aynı yörüngede eşit alan verir; parametre değişince önceki taramalar silinir. F₀ aynı gezegenin 1 AU’da 1 Güneş kütlesinden gördüğü kuvvettir. Oynatma süresi ölçeklidir.</p></details>
+<script src="script.js"></script>
+</body>
+</html>

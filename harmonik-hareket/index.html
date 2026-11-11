@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basit Harmonik Hareket</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="../vendor/fonts.css" rel="stylesheet">
+    <script src="../vendor/lucide.min.js"></script>
+<link rel="stylesheet" href="../shared/lab.css">
+<script src="../shared/lab.js" defer></script>
+<link rel="stylesheet" href="../shared/curriculum.css"></head>
+<body data-lab="harmonik-hareket">
+    <nav class="top-nav">
+        <a href="../index.html" class="back-link"><i data-lucide="arrow-left"></i> Portala Dön</a>
+        <div class="logo">
+            <i data-lucide="atom"></i>
+            <span>Ahmet Hoca</span>
+        </div>
+    </nav>
+
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Basit Harmonik Hareket</h1>
+            <p>Yay sarkacı ve basit sarkacı yan yana karşılaştırın, kütle ve yerçekiminin periyoda olan muazzam etkisini (veya etkisizliğini) analiz edin.</p>
+        </header><section class="curriculum-meta" data-module-id="harmonik-hareket" data-module-type="sanal-deney" data-curriculum-status="dogrudan" aria-label="Sınıf ve program kullanım bilgisi"><div class="curriculum-meta-heading"><h2>Sınıf ve program kullanımı</h2><span class="curriculum-type">Sanal deney</span></div><p class="curriculum-status-line"><strong>Ünite bağlantılı</strong></p><ul class="curriculum-grade-list"><li data-grade="10" data-role="dogrudan" data-level="temel"><strong>10. sınıf</strong><span>Temel düzey · doğrudan ünite bağlantısı</span></li><li data-grade="12" data-role="dogrudan" data-level="ileri"><strong>12. sınıf</strong><span>İleri düzey · doğrudan ünite bağlantısı</span></li></ul><p class="curriculum-status-note">En az bir sınıf için ünite/temel konu bağlantısı vardır. Diğer sınıf etiketleri destekleyici kullanım olabilir; bu bilgi kazanım bazlı resmî uygunluk onayı değildir.</p></section>
+
+        <main class="main-grid">
+            
+            <!-- Left: Controls -->
+            <section class="panel controls-panel">
+                <h2><i data-lucide="sliders-horizontal"></i> Sistem Parametreleri</h2>
+                
+                <div class="controls-content">
+                    
+                    <div class="slider-group">
+                        <label>Yay Sabiti (k): <span id="kLabel">200</span> N/m</label>
+                        <input type="range" id="kInput" min="50" max="500" step="10" value="200">
+                    </div>
+
+                    <div class="slider-group">
+                        <label>İp Uzunluğu (L): <span id="lLabel">2.0</span> m</label>
+                        <input type="range" id="lInput" min="0.5" max="5.0" step="0.1" value="2.0">
+                    </div>
+
+                    <div class="slider-group">
+                        <label>Kütleler (m): <span id="mLabel">5.0</span> kg</label>
+                        <input type="range" id="mInput" min="1.0" max="20.0" step="0.5" value="5.0">
+                    </div>
+
+                    <div class="slider-group">
+                        <label>Çekilme Genliği (r): <span id="rLabel">40</span> cm</label>
+                        <input type="range" id="rInput" min="10" max="50" step="1" value="40">
+                    </div>
+
+                    <hr class="divider">
+
+                    <div class="dropdown-group">
+                        <label>Yerçekimi Ortamı</label>
+                        <select id="gSelect" class="styled-select">
+                            <option value="9.81" selected>Dünya (g = 9.81 m/s²)</option>
+                            <option value="1.62">Ay (g = 1.62 m/s²)</option>
+                            <option value="24.79">Jüpiter (g = 24.79 m/s²)</option>
+                            <option value="3.72">Mars (g = 3.72 m/s²)</option>
+                            <option value="0.01">Düşük yerçekimi (g = 0.01 m/s²)</option>
+                        </select>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Center: Visuals -->
+            <section class="panel visual-panel">
+                <h2><i data-lucide="activity"></i> Karşılaştırmalı Salınım</h2>
+                
+                <div class="simulation-area">
+                    <canvas id="simCanvas" width="600" height="450"></canvas>
+                </div>
+                
+                <div class="legend-row">
+                    <span class="l-item f-color"><span class="l-dot"></span> Kuvvet / İvme</span>
+                    <span class="l-item v-color"><span class="l-dot"></span> Hız (v)</span>
+                </div>
+            </section>
+
+            <!-- Right: Analysis -->
+            <section class="panel analysis-panel">
+                <h2><i data-lucide="clock"></i> Periyot ve Enerji</h2>
+                
+                <div class="analysis-content">
+                    
+                    <!-- Yay Sarkacı Data -->
+                    <div class="system-block">
+                        <div class="sys-header"><i data-lucide="git-pull-request"></i> Yay Sarkacı</div>
+                        <div class="sensor-card">
+                            <div class="s-title">Periyot (T_yay)</div>
+                            <div class="s-val text-spring" id="valTyay">0.00 <span class="unit">sn</span></div>
+                            <div class="s-sub">T = 2π√(m/k)</div>
+                        </div>
+                        <div class="energy-bars">
+                            <div class="bar-col">
+                                <div class="bar-bg"><div class="bar-fill bg-ek" id="barEkYay"></div></div>
+                                <span class="bar-lbl">E_K</span>
+                            </div>
+                            <div class="bar-col">
+                                <div class="bar-bg"><div class="bar-fill bg-ep" id="barEpYay"></div></div>
+                                <span class="bar-lbl">E_P</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="divider">
+
+                    <!-- Basit Sarkaç Data -->
+                    <div class="system-block">
+                        <div class="sys-header"><i data-lucide="anchor"></i> Basit Sarkaç</div>
+                        <div class="sensor-card">
+                            <div class="s-title">Periyot (T_ip)</div>
+                            <div class="s-val text-pendulum" id="valTip">0.00 <span class="unit">sn</span></div>
+                            <div class="s-sub">Küçük açıda T ≈ 2π√(L/g); gösterge büyük açı düzeltmesini içerir.</div>
+                        </div>
+                        <div class="energy-bars">
+                            <div class="bar-col">
+                                <div class="bar-bg"><div class="bar-fill bg-ek" id="barEkIp"></div></div>
+                                <span class="bar-lbl">E_K</span>
+                            </div>
+                            <div class="bar-col">
+                                <div class="bar-bg"><div class="bar-fill bg-ep" id="barEpIp"></div></div>
+                                <span class="bar-lbl">E_P</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <details class="lab-note"><summary>Deneyin modeli ve kullanım notları</summary><p>Yay sarkacı Hooke yasasıyla analitik, basit sarkaç θ̈=−(g/L)sinθ ile hesaplanır. Büyük açılarda periyot küçük açı değerinden büyüktür; periyot göstergesi bunu içerir. Parametre değişince her iki sistem en büyük uzanımdan yeniden başlar. Sürtünme yoktur.</p></details>
+<script src="script.js"></script>
+</body>
+</html>
