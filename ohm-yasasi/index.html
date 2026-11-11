@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohm Yasası ve Basit Devreler</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="../vendor/fonts.css" rel="stylesheet">
+    <script src="../vendor/chart.umd.js"></script>
+    <script src="../vendor/lucide.min.js"></script>
+<link rel="stylesheet" href="../shared/lab.css">
+<script src="../shared/lab.js" defer></script>
+<link rel="stylesheet" href="../shared/curriculum.css"></head>
+<body data-lab="ohm-yasasi">
+    <nav class="top-nav">
+        <a href="../index.html" class="back-link"><i data-lucide="arrow-left"></i> Portala Dön</a>
+        <div class="logo">
+            <i data-lucide="atom"></i>
+            <span>Ahmet Hoca</span>
+        </div>
+    </nav>
+
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Ohm Yasası ve Basit Devreler</h1>
+            <p>Akım, gerilim ve direnç arasındaki ilişkiyi devre üzerinden ve grafikten gözlemleyin.</p>
+        </header><section class="curriculum-meta" data-module-id="ohm-yasasi" data-module-type="sanal-deney" data-curriculum-status="dogrudan" aria-label="Sınıf ve program kullanım bilgisi"><div class="curriculum-meta-heading"><h2>Sınıf ve program kullanımı</h2><span class="curriculum-type">Sanal deney</span></div><p class="curriculum-status-line"><strong>Ünite bağlantılı</strong></p><ul class="curriculum-grade-list"><li data-grade="8" data-role="dogrudan" data-level="temel"><strong>8. sınıf</strong><span>Temel düzey · doğrudan ünite bağlantısı</span></li><li data-grade="10" data-role="dogrudan" data-level="ileri"><strong>10. sınıf</strong><span>İleri düzey · doğrudan ünite bağlantısı</span></li></ul><p class="curriculum-status-note">En az bir sınıf için ünite/temel konu bağlantısı vardır. Diğer sınıf etiketleri destekleyici kullanım olabilir; bu bilgi kazanım bazlı resmî uygunluk onayı değildir.</p></section>
+
+        <main class="main-grid">
+            
+            <!-- Left: Controls -->
+            <section class="panel controls-panel">
+                <h2><i data-lucide="sliders-horizontal"></i> Kullanıcı Değişkenleri</h2>
+                
+                <div class="controls-content">
+                    <div class="slider-group">
+                        <label>Üreteç Gerilimi (V): <span id="vLabel">24</span> V</label>
+                        <input type="range" id="vInput" min="0" max="60" step="1" value="24">
+                    </div>
+                    
+                    <div class="slider-group">
+                        <label>Direnç (R): <span id="rLabel">12</span> Ω</label>
+                        <input type="range" id="rInput" min="1" max="30" step="1" value="12">
+                    </div>
+                </div>
+
+                <div class="switch-container">
+                    <div class="switch-label">Anahtar Durumu</div>
+                    <button id="btnToggle" class="toggle-btn off">
+                        <div class="toggle-knob"></div>
+                        <span class="toggle-text">KAPALI (OFF)</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Center: Visuals -->
+            <section class="panel visual-panel">
+                <h2><i data-lucide="cpu"></i> Devre Simülasyonu</h2>
+                
+                <div class="circuit-area">
+                    <!-- SVG Wire Path for glowing electrons -->
+                    <svg class="circuit-svg" width="100%" height="100%" viewBox="0 0 400 300">
+                        <!-- Background Wire -->
+                        <path d="M 50 150 L 50 50 L 250 50 L 350 50 L 350 250 L 50 250 Z" 
+                              fill="none" stroke="#334155" stroke-width="4"/>
+                        <!-- Electron Flow Wire -->
+                        <path id="electronPath" d="M 50 150 L 50 50 L 250 50 L 350 50 L 350 250 L 50 250 Z" 
+                              fill="none" stroke="#3b82f6" stroke-width="4" 
+                              stroke-dasharray="10 15" stroke-linecap="round"/>
+                        <!-- Voltmeter parallel wire -->
+                        <path d="M 350 100 L 250 100 L 250 200 L 350 200" 
+                              fill="none" stroke="#334155" stroke-width="2"/>
+                    </svg>
+
+                    <!-- Components -->
+                    <!-- Battery (Left) -->
+                    <div class="component comp-battery">
+                        <div class="battery-body">
+                            <div class="batt-term pos">+</div>
+                            <div class="batt-term neg">-</div>
+                        </div>
+                        <div class="comp-label">V = <span id="lblBatteryV">0</span> V</div>
+                    </div>
+
+                    <!-- Ammeter (Top) -->
+                    <div class="component comp-ammeter meter">
+                        <div class="meter-screen" id="meterA">0.00 A</div>
+                        <div class="comp-label">Ampermetre</div>
+                    </div>
+
+                    <!-- Resistor (Right) -->
+                    <div class="component comp-resistor">
+                        <div class="resistor-body" id="resistorVisual">
+                            <div class="band"></div>
+                            <div class="band"></div>
+                            <div class="band"></div>
+                        </div>
+                        <div class="comp-label">R = <span id="lblResistorR">12</span> Ω</div>
+                    </div>
+
+                    <!-- Voltmeter (Parallel to Resistor) -->
+                    <div class="component comp-voltmeter meter">
+                        <div class="meter-screen" id="meterV">0.0 V</div>
+                        <div class="comp-label">Voltmetre</div>
+                    </div>
+
+                    <!-- Switch (Bottom) -->
+                    <div class="component comp-switch">
+                        <div class="switch-drawing" id="switchVisual">
+                            <div class="sw-term left"></div>
+                            <div class="sw-blade"></div>
+                            <div class="sw-term right"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Right: Analysis -->
+            <section class="panel analysis-panel">
+                <h2><i data-lucide="line-chart"></i> Potansiyel Fark - Akım (V-I)</h2>
+                
+                <div class="analysis-content">
+                    <div class="info-card">
+                        <div class="info-row">
+                            <span>Eğim = V / I = </span>
+                            <strong class="neon-text" id="slopeText">R (Direnç)</strong>
+                        </div>
+                    </div>
+
+                    <div class="graph-container">
+                        <canvas id="viChart"></canvas>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <details class="lab-note"><summary>Deneyin modeli ve kullanım notları</summary><p>İdeal gerilim kaynağı, sabit direnç ve ideal ölçü aletleri kullanılır. Anahtar kapandığında I=V/R. Elektron animasyonu akımın varlığını ve göreli büyüklüğünü temsil eder; gerçek sürüklenme hızı ölçeğinde değildir.</p></details>
+<script src="script.js"></script>
+</body>
+</html>

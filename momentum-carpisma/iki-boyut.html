@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İtme, Momentum ve Çarpışmalar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="../vendor/fonts.css" rel="stylesheet">
+    <script src="../vendor/lucide.min.js"></script>
+<link rel="stylesheet" href="../shared/lab.css">
+<script src="../shared/lab.js" defer></script>
+</head>
+<body>
+    <nav class="top-nav"><a href="index.html" class="back-link">← Arabalı deney</a>
+        <a href="../index.html" class="back-link"><i data-lucide="arrow-left"></i> Portala Dön</a>
+        <div class="logo">
+            <i data-lucide="atom"></i>
+            <span>Ahmet Hoca</span>
+        </div>
+    </nav>
+
+    <div class="app-container">
+        <header class="app-header">
+            <h1>İtme ve Çizgisel Momentum (İki Boyutta Çarpışmalar)</h1>
+            <p>Esnek, kısmen esnek ve esnek olmayan çarpışmaları, momentumun vektörel korunumunu ve enerji kayıplarını inceleyin.</p>
+        </header>
+
+        <main class="main-grid">
+            
+            <!-- Left: Controls -->
+            <section class="panel controls-panel">
+                <h2><i data-lucide="sliders-horizontal"></i> Çarpışma Parametreleri</h2>
+                
+                <div class="controls-content">
+                    
+                    <div class="slider-group">
+                        <label>1. Cisim Kütlesi (m₁): <span id="m1Label">2</span> kg</label>
+                        <input type="range" id="m1Input" min="1" max="10" step="1" value="2">
+                    </div>
+
+                    <div class="slider-group">
+                        <label>1. Cisim Hızı (v₁): <span id="v1Label">10</span> m/s</label>
+                        <input type="range" id="v1Input" min="0" max="20" step="1" value="10">
+                    </div>
+
+                    <hr class="divider">
+
+                    <div class="slider-group">
+                        <label>2. Cisim Kütlesi (m₂): <span id="m2Label">3</span> kg</label>
+                        <input type="range" id="m2Input" min="1" max="10" step="1" value="3">
+                    </div>
+
+                    <div class="slider-group">
+                        <label>2. Cisim Hızı (v₂): <span id="v2Label">5</span> m/s</label>
+                        <input type="range" id="v2Input" min="0" max="20" step="1" value="5">
+                    </div>
+
+                    <div class="slider-group">
+                        <label>Geliş Açısı (θ): <span id="thetaLabel">60</span>°</label>
+                        <input type="range" id="thetaInput" min="0" max="180" step="5" value="60">
+                    </div>
+
+                    <hr class="divider">
+
+                    <div class="slider-group">
+                        <label>Esneklik Katsayısı (e): <span id="eLabel">0.8</span></label>
+                        <input type="range" id="eInput" min="0" max="1" step="0.1" value="0.8">
+                        <div class="e-status" id="eStatus">Kısmen Esnek Çarpışma</div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="action-grid">
+                        <button id="btnFire" class="action-btn fire"><i data-lucide="zap"></i> ÇARPIŞTIR</button>
+                        <button id="btnReset" class="action-btn reset"><i data-lucide="refresh-cw"></i> SIFIRLA</button>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Center: Visuals -->
+            <section class="panel visual-panel">
+                <h2><i data-lucide="merge"></i> Simülasyon Alanı</h2>
+                
+                <div class="simulation-area">
+                    <canvas id="simCanvas" width="800" height="400"></canvas>
+                    
+                    <!-- Vektör İspat Kutusu (Sağ Alt) -->
+                    <div class="vector-box">
+                        <div class="vb-title">Vektörel Momentum (P)</div>
+                        <canvas id="vectorCanvas" width="150" height="150"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right: Analysis -->
+            <section class="panel analysis-panel">
+                <h2><i data-lucide="bar-chart-2"></i> Çarpışma Analizi</h2>
+                
+                <div class="analysis-content">
+                    
+                    <div class="angle-card">
+                        <div class="a-title">Sonuç Hızları (v')</div>
+                        <div class="a-row">
+                            <div class="a-col m1-color">m₁: <strong id="v1fLabel">-- m/s</strong></div>
+                            <div class="a-col m2-color">m₂: <strong id="v2fLabel">-- m/s</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="chart-card">
+                        <div class="chart-title">Sistemin Kinetik Enerjisi (J)</div>
+                        <div class="bar-chart">
+                            <div class="bar-container">
+                                <div class="bar" id="barInitial" style="height: 0%; background: #0ea5e9;"></div>
+                                <div class="bar-label">E_ilk</div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar loss-bar" id="barLoss" style="height: 0%;"></div>
+                                <div class="bar" id="barFinal" style="height: 0%; background: #22c55e;"></div>
+                                <div class="bar-label">E_son</div>
+                            </div>
+                        </div>
+                        <div class="energy-values">
+                            <span>E_ilk: <strong id="eİlkLabel">0</strong> J</span>
+                            <span>E_son: <strong id="eSonLabel">0</strong> J</span>
+                        </div>
+                        <div class="loss-alert" id="lossAlert">
+                            <i data-lucide="flame"></i> İç enerjiye dönüşüm: <strong id="eKayipLabel">0</strong> J
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <i data-lucide="info"></i>
+                        <p>Dış itmenin sıfır olduğu bu sistemde momentum korunur. Kinetik enerji yalnızca <strong>Esnek (e=1)</strong> çarpışmalarda korunur. (e=0) olduğunda cisimler kenetlenir.</p>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <details class="lab-note"><summary>Deneyin modeli ve kullanım notları</summary><p>Sürtünmesiz iki disk; çarpışma temas doğrultusunda impuls ile hesaplanır. e=1 esnek, 0<e<1 kısmen esnektir. e=0 seçimi yapışan cisim modelidir: her iki hız bileşeni ortak olur. Deney boyunca başlangıç parametreleri kilitlidir. 30 saniye sonunda veya cisimler sahneden ayrılınca oynatma durur.</p></details>
+<script src="legacy.js"></script>
+</body>
+</html>

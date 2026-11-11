@@ -1,0 +1,13 @@
+{
+  "baslik": "Serbest Düşme 3B",
+  "aciklama": "Yerçekimi ivmesini ve düşme süresini deneyerek keşfedin.",
+  "siniflar": [
+    9,
+    11
+  ],
+  "konu": "Hareket",
+  "tur": "sanal-deney",
+  "program": "destekleyici",
+  "ikon": "move-down",
+  "yayinda": true
+}

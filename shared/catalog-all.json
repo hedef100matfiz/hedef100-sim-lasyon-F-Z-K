@@ -1,0 +1,2642 @@
+[
+  {
+    "id": "ozkutle-karisimlar",
+    "title": "Özkütle ve Karışımlar",
+    "desc": "Sıvıların karışımlarını ve özkütle hesaplamalarını gerçek zamanlı dinamik grafiklerle gözlemleyin.",
+    "grades": [
+      5,
+      6,
+      9
+    ],
+    "topic": "Madde",
+    "isNew": false,
+    "gradeUsage": [
+      {
+        "grade": 5,
+        "role": "destekleyici",
+        "level": "temel"
+      },
+      {
+        "grade": 6,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 9,
+        "role": "destekleyici",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "dayaniklilik-adezyon",
+    "title": "Dayanıklılık, Adezyon ve Kohezyon",
+    "desc": "Katılarda dayanıklılık prensiplerini ve sıvılarda kılcallık etkilerini etkileşimli şemalarla inceleyin.",
+    "grades": [
+      9
+    ],
+    "topic": "Madde",
+    "isNew": false,
+    "gradeUsage": [
+      {
+        "grade": 9,
+        "role": "destekleyici",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "destekleyici"
+  },
+  {
+    "id": "dogrusal-hareket",
+    "title": "Doğrusal Hareket",
+    "desc": "Sabit hızlı ve ivmeli hareketi, anlık konum-hız-ivme grafikleri ve araç animasyonu ile test edin.",
+    "grades": [
+      6,
+      9,
+      10
+    ],
+    "topic": "Hareket",
+    "isNew": false,
+    "gradeUsage": [
+      {
+        "grade": 6,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 9,
+        "role": "dogrudan",
+        "level": "ileri"
+      },
+      {
+        "grade": 10,
+        "role": "dogrudan",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "surtunme-kuvveti",
+    "title": "Kuvvet, Hareket ve Sürtünme",
+    "desc": "Kuvveti hareket sırasında değiştirin; yatay zemin, eğik düzlem, kütle ve yüzey karşılaştırmalarını eş zamanlı grafiklerle inceleyin.",
+    "grades": [
+      5,
+      11,
+      12
+    ],
+    "topic": "Kuvvet",
+    "isNew": false,
+    "gradeUsage": [
+      {
+        "grade": 5,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 11,
+        "role": "dogrudan",
+        "level": "ileri"
+      },
+      {
+        "grade": 12,
+        "role": "dogrudan",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "enerji-donusumu",
+    "title": "Mekanik Enerji ve Dönüşümler",
+    "desc": "Altı senaryo: enerji dönüşümleri, yay, çift rampa ve statik–kinetik sürtünme; grafiklerle karşılaştırma.",
+    "grades": [
+      7,
+      10,
+      12
+    ],
+    "topic": "Enerji",
+    "isNew": false,
+    "gradeUsage": [
+      {
+        "grade": 7,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 10,
+        "role": "dogrudan",
+        "level": "ileri"
+      },
+      {
+        "grade": 12,
+        "role": "dogrudan",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "hal-degisimi",
+    "title": "Isıtma ve Hâl Değişimi",
+    "desc": "Maddenin hal değişim evrelerini moleküler düzeyde ve Sıcaklık-Isı grafikleriyle interaktif inceleyin.",
+    "grades": [
+      5,
+      6,
+      9
+    ],
+    "topic": "Isı",
+    "isNew": false,
+    "gradeUsage": [
+      {
+        "grade": 5,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 6,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 9,
+        "role": "dogrudan",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "elektriklenme",
+    "title": "Elektroskop ve Elektriklenme",
+    "desc": "Dokunma ile elektriklenmeyi, yük dağılımını ve elektroskop yapraklarının hareketini neon efektlerle inceleyin.",
+    "grades": [
+      7,
+      9
+    ],
+    "topic": "Elektrik",
+    "isNew": false,
+    "gradeUsage": [
+      {
+        "grade": 7,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 9,
+        "role": "destekleyici",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "ohm-yasasi",
+    "title": "Ohm Yasası ve Basit Devreler",
+    "desc": "Akım, gerilim ve direnç arasındaki doğrusal ilişkiyi hareketli elektronlar ve V-I grafiği ile deneyimleyin.",
+    "grades": [
+      8,
+      10
+    ],
+    "topic": "Elektrik",
+    "isNew": false,
+    "gradeUsage": [
+      {
+        "grade": 8,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 10,
+        "role": "dogrudan",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "manyetik-alan",
+    "title": "Akımın Manyetik Etkisi",
+    "desc": "Düz telin etrafındaki manyetik alanı, Sağ El Kuralını ve pusula sapmalarını izometrik şemada inceleyin.",
+    "grades": [
+      11
+    ],
+    "topic": "Elektrik",
+    "isNew": false,
+    "gradeUsage": [
+      {
+        "grade": 11,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "pascal-prensibi",
+    "title": "Pascal Prensibi ve Su Cenderesi",
+    "desc": "Sıvıların basıncı her yöne iletmesini, kuvvet kazancını basınç renk haritası ve hareketli pistonlarla keşfedin.",
+    "grades": [
+      9
+    ],
+    "topic": "Basınç",
+    "isNew": false,
+    "gradeUsage": [
+      {
+        "grade": 9,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "arsimet-prensibi",
+    "title": "Arşimet Prensibi ve Kaldırma Kuvveti",
+    "desc": "Dinamometreye asılı cismi sıvıya daldırarak görünür ağırlığı ve büyüyen kaldırma kuvveti vektörünü deneyimleyin.",
+    "grades": [
+      9
+    ],
+    "topic": "Basınç",
+    "isNew": false,
+    "gradeUsage": [
+      {
+        "grade": 9,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "kuresel-aynalar",
+    "title": "Küresel Aynalar (Çukur ve Tümsek)",
+    "desc": "Lazer ışınlarıyla optik izleme yaparak aynalardaki görüntü oluşumunu ve özelliklerini analiz edin.",
+    "grades": [
+      6,
+      11
+    ],
+    "topic": "Optik",
+    "isNew": false,
+    "gradeUsage": [
+      {
+        "grade": 6,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 11,
+        "role": "dogrudan",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "yay-dalgalari",
+    "title": "Yay Dalgaları ve Girişim",
+    "desc": "Atmaların sabit ve serbest uçtan yansımasını, süperpozisyon ilkesiyle yapıcı ve yıkıcı girişimi izleyin.",
+    "grades": [
+      10
+    ],
+    "topic": "Dalgalar",
+    "isNew": false,
+    "gradeUsage": [
+      {
+        "grade": 10,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "egik-atis",
+    "title": "İki Boyutta Hareket (Eğik Atış)",
+    "desc": "Hava sürtünmeli ve sürtünmesiz ortamda balistik yörüngeleri, hız vektörlerini ve limit hızı inceleyin.",
+    "grades": [
+      11
+    ],
+    "topic": "Hareket",
+    "isNew": false,
+    "gradeUsage": [
+      {
+        "grade": 11,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "tork-denge",
+    "title": "Tork, Denge ve Kütle Merkezi",
+    "desc": "Kuvvet vektörlerini, destek tepkilerini ve sistemin statik limitlerindeki devrilme anlarını görselleştirin.",
+    "grades": [
+      8,
+      12
+    ],
+    "topic": "Kuvvet",
+    "isNew": false,
+    "gradeUsage": [
+      {
+        "grade": 8,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 12,
+        "role": "dogrudan",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "momentum-carpisma",
+    "title": "İtme ve Momentum (Çarpışmalar)",
+    "desc": "İki boyutta esnek ve esnek olmayan çarpışmaları, enerji kayıplarını ve momentum vektörlerini inceleyin.",
+    "grades": [
+      12
+    ],
+    "topic": "Hareket",
+    "isNew": false,
+    "gradeUsage": [
+      {
+        "grade": 12,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "elektrik-alan",
+    "title": "Elektrik Alan ve Eşpotansiyel",
+    "desc": "Noktasal yüklerin etrafındaki elektrik alan vektörlerini ve eşpotansiyel haritalarını inceleyin.",
+    "grades": [
+      7,
+      11
+    ],
+    "topic": "Elektrik",
+    "isNew": false,
+    "gradeUsage": [
+      {
+        "grade": 7,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 11,
+        "role": "dogrudan",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "kapasitor-dielektrik",
+    "title": "Sığa (Kapasitör) ve Dielektrik",
+    "desc": "Paralel levhalar arasındaki elektrik alanı, sığayı ve yalıtkan (dielektrik) maddelerin polarizasyonunu inceleyin.",
+    "grades": [
+      11
+    ],
+    "topic": "Elektrik",
+    "isNew": false,
+    "gradeUsage": [
+      {
+        "grade": 11,
+        "role": "destekleyici",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "destekleyici"
+  },
+  {
+    "id": "alternatif-akim",
+    "title": "Alternatif Akım (RLC Devreleri)",
+    "desc": "RLC devrelerindeki faz farkını, empedans üçgenini ve rezonans durumunu canlı osiloskop ekranında izleyin.",
+    "grades": [
+      11
+    ],
+    "topic": "Elektrik",
+    "isNew": false,
+    "gradeUsage": [
+      {
+        "grade": 11,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "cembersel-hareket",
+    "title": "3B Çembersel Hareket ve Merkezcil Kuvvet",
+    "desc": "Üç boyutlu sahnede yatay çemberi, ipin kesilmesini, düşey çemberi ve virajdaki tutunma sınırını inceleyin.",
+    "grades": [
+      11
+    ],
+    "topic": "Hareket",
+    "isNew": false,
+    "gradeUsage": [
+      {
+        "grade": 11,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "kepler-yorunge",
+    "title": "Kepler Yasaları ve Yörünge",
+    "desc": "Gezegenlerin eliptik yörüngelerini, eşit alanlar yasasını ve açısal momentumun korunumunu keşfedin.",
+    "grades": [
+      12
+    ],
+    "topic": "Uzay",
+    "isNew": false,
+    "gradeUsage": [
+      {
+        "grade": 12,
+        "role": "destekleyici",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "kavramsal-model",
+    "curriculumStatus": "ileri-duzey"
+  },
+  {
+    "id": "harmonik-hareket",
+    "title": "Basit Harmonik Hareket",
+    "desc": "Yay sarkacı ve basit sarkacı yan yana karşılaştırın, kütle ve yerçekiminin periyoda etkisini inceleyin.",
+    "grades": [
+      10,
+      12
+    ],
+    "topic": "Hareket",
+    "isNew": false,
+    "gradeUsage": [
+      {
+        "grade": 10,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 12,
+        "role": "dogrudan",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "cift-yarik",
+    "title": "Çift Yarıkta Girişim (Young)",
+    "desc": "Işığın dalga doğasını, saçak aralığını ve kırıcılık indisinin girişim desenine etkilerini keşfedin.",
+    "grades": [
+      12
+    ],
+    "topic": "Dalgalar",
+    "isNew": false,
+    "gradeUsage": [
+      {
+        "grade": 12,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "fotoelektrik",
+    "title": "Fotoelektrik Olay",
+    "desc": "Foton-elektron etkileşimini, kesme potansiyelini ve kuantum fiziğinin temellerini interaktif bir deney tüpünde inceleyin.",
+    "grades": [
+      12
+    ],
+    "topic": "Modern fizik",
+    "isNew": false,
+    "gradeUsage": [
+      {
+        "grade": 12,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "ay-evreleri",
+    "title": "Ay’ın Evreleri ve Eş Dönme",
+    "desc": "Ay’ın yörüngedeki konumuyla Dünya’dan görülen aydınlık kısmı karşılaştırın.",
+    "grades": [
+      5,
+      6
+    ],
+    "topic": "Uzay",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 5,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 6,
+        "role": "destekleyici",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "gunes-sistemi",
+    "title": "Güneş Sistemi ve Yörüngeler",
+    "desc": "Gezegenleri uzaklık, büyüklük ve dolanma süresi bakımından karşılaştırın.",
+    "grades": [
+      5,
+      6,
+      7
+    ],
+    "topic": "Uzay",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 5,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 6,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 7,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "tutulmalar",
+    "title": "Güneş ve Ay Tutulmaları",
+    "desc": "Ay’ın konumu ve yörünge eğiminin tutulma hizalanmasını nasıl etkilediğini keşfedin.",
+    "grades": [
+      6
+    ],
+    "topic": "Uzay",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 6,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "mevsimler",
+    "title": "Mevsimler ve Gün Uzunluğu",
+    "desc": "Eksen eğikliği, enlem ve yılın gününü değiştirerek ışın açısını ve gündüzü inceleyin.",
+    "grades": [
+      8
+    ],
+    "topic": "Uzay",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 8,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "iklim-sera",
+    "title": "Hava Olayları ve Sera Etkisi",
+    "desc": "Yansıtıcılık ve kızılötesi soğurma ile ideal gezegenin enerji dengesini değiştirin.",
+    "grades": [
+      8
+    ],
+    "topic": "Çevre",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 8,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "dinamometre",
+    "title": "Dinamometre, Kütle ve Ağırlık",
+    "desc": "Gezegen ve yay sabitini değiştirerek aynı kütlenin ağırlığını ölçün.",
+    "grades": [
+      5,
+      12
+    ],
+    "topic": "Kuvvet",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 5,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 12,
+        "role": "dogrudan",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "hucre",
+    "title": "Bitki ve Hayvan Hücresi",
+    "desc": "Bitki ve hayvan hücrelerini 3B karşılaştırın; organelleri seçin, ayırın ve görevlerini keşfedin.",
+    "grades": [
+      5
+    ],
+    "topic": "Canlılar",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 5,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "etkilesimli-sema",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "destek-hareket",
+    "title": "Destek, Hareket ve Yapı Basamakları",
+    "desc": "Dirsekte karşıt kasların çalışmasını ve hücreden organizmaya yapıyı inceleyin.",
+    "grades": [
+      5
+    ],
+    "topic": "Canlılar",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 5,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "etkilesimli-sema",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "golge",
+    "title": "Işığın Yayılması ve Tam Gölge",
+    "desc": "Noktasal kaynak, opak cisim ve perde uzaklıklarıyla gölgeyi büyütün.",
+    "grades": [
+      5,
+      11
+    ],
+    "topic": "Optik",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 5,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 11,
+        "role": "destekleyici",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "tanecikler",
+    "title": "Maddenin Tanecikli Yapısı",
+    "desc": "Katı, sıvı ve gazda taneciklerin düzeni ve hareketlerini karşılaştırın.",
+    "grades": [
+      5,
+      6
+    ],
+    "topic": "Madde",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 5,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 6,
+        "role": "destekleyici",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "isi-alisverisi",
+    "title": "Isı Alışverişi ve Termal Denge",
+    "desc": "İki su örneğinin kütle ve başlangıç sıcaklıklarından denge sıcaklığını bulun.",
+    "grades": [
+      5,
+      9
+    ],
+    "topic": "Isı",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 5,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 9,
+        "role": "dogrudan",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "isi-yalitimi",
+    "title": "Isı İletimi ve Yalıtım",
+    "desc": "Malzeme, kalınlık ve sıcaklık farkının duvardaki ısı akışını değiştirin.",
+    "grades": [
+      5,
+      9
+    ],
+    "topic": "Isı",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 5,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 9,
+        "role": "dogrudan",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "basit-devre",
+    "title": "Pil, Ampul ve Anahtar",
+    "desc": "Pil ve ampul sayısıyla kapalı devrede parlaklık değişimini inceleyin.",
+    "grades": [
+      5,
+      6,
+      10
+    ],
+    "topic": "Elektrik",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 5,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 6,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 10,
+        "role": "dogrudan",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "geri-donusum",
+    "title": "Atık Ayırma ve Geri Dönüşüm",
+    "desc": "Bir atık türünü uygun toplama yoluyla eşleştirin ve ayrıştırma sonucunu görün.",
+    "grades": [
+      5,
+      6,
+      7
+    ],
+    "topic": "Çevre",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 5,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 6,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 7,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "siniflandirma-etkinligi",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "bileske-kuvvet",
+    "title": "Bileşke Kuvvet ve Vektörler",
+    "desc": "İki kuvvetin yönünü ve büyüklüğünü değiştirip bileşkeyi oluşturun.",
+    "grades": [
+      6,
+      9,
+      11
+    ],
+    "topic": "Kuvvet",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 6,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 9,
+        "role": "dogrudan",
+        "level": "ileri"
+      },
+      {
+        "grade": 11,
+        "role": "destekleyici",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "yol-yer-degistirme",
+    "title": "Yol, Yer Değiştirme ve Sürat",
+    "desc": "Gidiş–dönüş hareketinde toplam yolu ve yer değiştirmeyi ayırın.",
+    "grades": [
+      6,
+      9
+    ],
+    "topic": "Hareket",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 6,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 9,
+        "role": "dogrudan",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "cimlenme",
+    "title": "Çimlenme ve Bitki Gelişimi",
+    "desc": "Su, oksijen ve uygun sıcaklığın çimlenme koşullarını birlikte sağlayın.",
+    "grades": [
+      6
+    ],
+    "topic": "Canlılar",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 6,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "etkilesimli-sema",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "ureme-gelisme",
+    "title": "Üreme ve Yaşam Döngüsü",
+    "desc": "Bitki ve hayvanlarda gelişim basamaklarını sıralı olarak inceleyin.",
+    "grades": [
+      6
+    ],
+    "topic": "Canlılar",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 6,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "etkilesimli-sema",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "sinir-duyu",
+    "title": "Sinir Sistemi, Refleks ve Duyu",
+    "desc": "Uyaranın duyu organından sinir merkezine ve tepki organına iletilmesini izleyin.",
+    "grades": [
+      6
+    ],
+    "topic": "Canlılar",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 6,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "etkilesimli-sema",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "yansima",
+    "title": "Yansıma ve Düzlem Ayna",
+    "desc": "Gelme açısını değiştirip yansıyan ışını ve sanal görüntüyü inceleyin.",
+    "grades": [
+      6,
+      11
+    ],
+    "topic": "Optik",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 6,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 11,
+        "role": "dogrudan",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "renkler",
+    "title": "Işık Renkleri ve Renkli Cisimler",
+    "desc": "RGB ışık karışımını ve cismin hangi ışığı yansıttığını karşılaştırın.",
+    "grades": [
+      6,
+      12
+    ],
+    "topic": "Optik",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 6,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 12,
+        "role": "dogrudan",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "direnc-tel",
+    "title": "Telin Direnci ve İletkenlik",
+    "desc": "Uzunluk, kesit ve malzemenin tel direncini nasıl değiştirdiğini inceleyin.",
+    "grades": [
+      6,
+      10
+    ],
+    "topic": "Elektrik",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 6,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 10,
+        "role": "dogrudan",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "ekosistem",
+    "title": "Besin Zinciri ve Ekolojik Enerji",
+    "desc": "Üreticiden tüketicilere aktarılan enerjinin azalmasını gözlemleyin.",
+    "grades": [
+      7,
+      8
+    ],
+    "topic": "Çevre",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 7,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 8,
+        "role": "destekleyici",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "etkilesimli-sema",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "teleskop",
+    "title": "Teleskop ve Açısal Büyütme",
+    "desc": "Objektif ve göz merceği odaklarıyla astronomik teleskop büyütmesini değiştirin.",
+    "grades": [
+      7,
+      11
+    ],
+    "topic": "Uzay",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 7,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 11,
+        "role": "destekleyici",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "yildizlar",
+    "title": "Yıldızların Yaşamı",
+    "desc": "Başlangıç kütlesine göre yıldızın yaşam yolunu karşılaştırın.",
+    "grades": [
+      7
+    ],
+    "topic": "Uzay",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 7,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "is-guc",
+    "title": "İş, Güç ve Enerji",
+    "desc": "Kuvvetin yer değiştirmeyle yaptığı açının işe etkisini ölçün.",
+    "grades": [
+      7,
+      10
+    ],
+    "topic": "Enerji",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 7,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 10,
+        "role": "dogrudan",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "sindirim",
+    "title": "Sindirim Sistemi",
+    "desc": "Besin türü seçerek sindirim ve emilim yolundaki organları izleyin.",
+    "grades": [
+      7
+    ],
+    "topic": "Canlılar",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 7,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "etkilesimli-sema",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "solunum",
+    "title": "Solunum Mekaniği",
+    "desc": "Diyaframın hareketini, göğüs hacmini ve hava akışını ilişkilendirin.",
+    "grades": [
+      7
+    ],
+    "topic": "Canlılar",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 7,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "etkilesimli-sema",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "dolasim",
+    "title": "Küçük ve Büyük Kan Dolaşımı",
+    "desc": "Kalp–akciğer–vücut yolunu takip ederek kanın oksijen durumunu karşılaştırın.",
+    "grades": [
+      7
+    ],
+    "topic": "Canlılar",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 7,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "etkilesimli-sema",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "bosaltim",
+    "title": "Boşaltım ve Böbrek Modeli",
+    "desc": "Süzülme ve geri emilimin idrar miktarına etkisini modelleyin.",
+    "grades": [
+      7
+    ],
+    "topic": "Canlılar",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 7,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "etkilesimli-sema",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "hormonlar",
+    "title": "Denetleme, Hormon ve Geri Bildirim",
+    "desc": "Kan şekeri değişimi karşısında insülin ve glukagonun yönünü inceleyin.",
+    "grades": [
+      6,
+      7
+    ],
+    "topic": "Canlılar",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 6,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 7,
+        "role": "destekleyici",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "etkilesimli-sema",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "kirilma",
+    "title": "Kırılma ve Tam Yansıma",
+    "desc": "İki ortam arasında ışığın yön değişimini ve kritik açıyı bulun.",
+    "grades": [
+      7,
+      11
+    ],
+    "topic": "Optik",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 7,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 11,
+        "role": "dogrudan",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "mercekler",
+    "title": "İnce ve Kalın Kenarlı Mercekler",
+    "desc": "Odak ve cisim uzaklığından görüntünün türünü, yerini ve boyunu keşfedin.",
+    "grades": [
+      7,
+      11
+    ],
+    "topic": "Optik",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 7,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 11,
+        "role": "dogrudan",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "atom",
+    "title": "Atom, İyon ve İzotop",
+    "desc": "Proton, nötron ve elektron sayılarıyla element kimliğini, yükünü ve kütle sayısını kurun.",
+    "grades": [
+      7,
+      8,
+      12
+    ],
+    "topic": "Madde",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 7,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 8,
+        "role": "destekleyici",
+        "level": "temel"
+      },
+      {
+        "grade": 12,
+        "role": "dogrudan",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "siniflandirma-etkinligi",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "cozunurluk",
+    "title": "Çözünme ve Doygunluk",
+    "desc": "Su, çözünen ve sıcaklıkla çözünmüş madde ile çökeltiyi ayırın.",
+    "grades": [
+      7
+    ],
+    "topic": "Madde",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 7,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "karisim-ayirma",
+    "title": "Karışımları Ayırma",
+    "desc": "Karışım ile fiziksel ayırma yöntemini eşleştirip ayrılan bileşenleri görün.",
+    "grades": [
+      7
+    ],
+    "topic": "Madde",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 7,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "siniflandirma-etkinligi",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "yenilenebilir",
+    "title": "Yenilenebilir Enerji ve Verim",
+    "desc": "Güneş paneli ve rüzgâr türbininde giriş enerjisi ile yararlı gücü karşılaştırın.",
+    "grades": [
+      7,
+      8,
+      10,
+      12
+    ],
+    "topic": "Enerji",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 7,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 8,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 10,
+        "role": "dogrudan",
+        "level": "ileri"
+      },
+      {
+        "grade": 12,
+        "role": "dogrudan",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "basit-makineler",
+    "title": "Kaldıraç, Makara ve Eğik Düzlem",
+    "desc": "Üç basit makinede kuvvet kazancını ve yoldan kaybı karşılaştırın.",
+    "grades": [
+      8,
+      11
+    ],
+    "topic": "Kuvvet",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 8,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 11,
+        "role": "destekleyici",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "disliler",
+    "title": "Dişli, Çıkrık ve Vida",
+    "desc": "Dişli oranından dönme hızı ve tork aktarımını inceleyin.",
+    "grades": [
+      8,
+      11
+    ],
+    "topic": "Kuvvet",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 8,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 11,
+        "role": "destekleyici",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "dna",
+    "title": "DNA Yapısı ve Eşlenme",
+    "desc": "DNA’nın 3B yapısını ve eski/yeni zincirlerle eşlenmesini basamak basamak inceleyin.",
+    "grades": [
+      8
+    ],
+    "topic": "Canlılar",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 8,
+        "role": "onceki-program",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "etkilesimli-sema",
+    "curriculumStatus": "onceki-program"
+  },
+  {
+    "id": "kalitim",
+    "title": "Tek Karakter Çaprazlaması",
+    "desc": "İki ebeveynin genotipinden Punnett karesi ve yavru olasılıkları üretin.",
+    "grades": [
+      8
+    ],
+    "topic": "Canlılar",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 8,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "etkilesimli-sema",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "hucre-bolunmesi",
+    "title": "Mitoz ve Mayoz",
+    "desc": "Destekleyici 3B model: mitoz ve mayozda hücre, kromozom ve kromatit sayılarını karşılaştırın.",
+    "grades": [
+      8
+    ],
+    "topic": "Canlılar",
+    "isNew": true,
+    "curriculumStatus": "destekleyici",
+    "gradeUsage": [
+      {
+        "grade": 8,
+        "role": "destekleyici",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "etkilesimli-sema"
+  },
+  {
+    "id": "dogal-secilim",
+    "title": "Mutasyon, Çevre ve Doğal Seçilim",
+    "desc": "İki kalıtsal renk varyantının çevreye göre nesillerdeki oranını karşılaştırın.",
+    "grades": [
+      8
+    ],
+    "topic": "Canlılar",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 8,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "etkilesimli-sema",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "ses",
+    "title": "Sesin Frekansı, Genliği ve Yayılması",
+    "desc": "Ses dalgasında frekans, genlik ve ortam değişiminin etkilerini ayırın.",
+    "grades": [
+      8,
+      10
+    ],
+    "topic": "Dalgalar",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 8,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 10,
+        "role": "dogrudan",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "yanki",
+    "title": "Yankı ve Ses Yalıtımı",
+    "desc": "Yansıtıcı yüzeye uzaklık ve soğurmanın dönüş süresi ve şiddetine etkisini görün.",
+    "grades": [
+      8,
+      10
+    ],
+    "topic": "Dalgalar",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 8,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 10,
+        "role": "destekleyici",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "periyodik-tablo",
+    "title": "Periyodik Tablo: İlk 20 Element",
+    "desc": "Element seçip grup, periyot ve elektron dağılımını eşleştirin.",
+    "grades": [
+      8
+    ],
+    "topic": "Madde",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 8,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "siniflandirma-etkinligi",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "kimyasal-tepkime",
+    "title": "Kimyasal Tepkime ve Kütlenin Korunumu",
+    "desc": "Hidrojen ve oksijen miktarlarından oluşabilecek suyu ve artanı bulun.",
+    "grades": [
+      8
+    ],
+    "topic": "Madde",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 8,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "asit-baz",
+    "title": "Asit, Baz ve pH",
+    "desc": "pH ile hidrojen iyonu derişimi ve indikatör rengini ilişkilendirin.",
+    "grades": [
+      8
+    ],
+    "topic": "Madde",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 8,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "fotosentez",
+    "title": "Fotosentez ve Solunum",
+    "desc": "Işık ve karbondioksitle fotosentez hızını, sürekli solunumla net gaz değişimini karşılaştırın.",
+    "grades": [
+      8
+    ],
+    "topic": "Canlılar",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 8,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "etkilesimli-sema",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "madde-donguleri",
+    "title": "Su, Karbon ve Azot Döngüleri",
+    "desc": "Döngü ve süreç seçerek maddenin rezervuarlar arasındaki yolunu takip edin.",
+    "grades": [
+      8
+    ],
+    "topic": "Çevre",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 8,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "etkilesimli-sema",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "olcme",
+    "title": "Ölçme, Birimler ve Belirsizlik",
+    "desc": "Cetvelin bölme aralığıyla ölçüm sonucunun hassasiyetini karşılaştırın.",
+    "grades": [
+      9
+    ],
+    "topic": "Ölçme",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 9,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "bagil-hareket",
+    "title": "Bağıl Hareket ve Nehir Geçişi",
+    "desc": "Kayık hızıyla akıntıyı vektörel toplayıp kıyıya göre yolu izleyin.",
+    "grades": [
+      11
+    ],
+    "topic": "Hareket",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 11,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "newton-egik-duzlem",
+    "title": "Newton Yasaları ve Eğik Düzlem",
+    "desc": "Eğim ve sürtünme ile cismin durması veya kaymasını inceleyin.",
+    "grades": [
+      11
+    ],
+    "topic": "Kuvvet",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 11,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "serbest-dusme",
+    "title": "Serbest Düşme ve Düşey Atış",
+    "desc": "Başlangıç hızı ve yükseklikle düşey hareketin konum ve hızını inceleyin.",
+    "grades": [
+      10,
+      11
+    ],
+    "topic": "Hareket",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 10,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 11,
+        "role": "dogrudan",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "kati-basinci",
+    "title": "Katı Basıncı",
+    "desc": "Kuvvet ve temas alanının basınca etkisini karşılaştırın.",
+    "grades": [
+      8,
+      9
+    ],
+    "topic": "Basınç",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 8,
+        "role": "destekleyici",
+        "level": "temel"
+      },
+      {
+        "grade": 9,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "sivi-basinci",
+    "title": "Sıvı Basıncı ve Birleşik Kaplar",
+    "desc": "Derinlik ve yoğunluğu değiştirip sıvı basıncını ölçün.",
+    "grades": [
+      8,
+      9
+    ],
+    "topic": "Basınç",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 8,
+        "role": "destekleyici",
+        "level": "temel"
+      },
+      {
+        "grade": 9,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "gaz-basinc",
+    "title": "Gaz Basıncı ve İdeal Gaz",
+    "desc": "Kap hacmi ve mutlak sıcaklıkla ideal gaz basıncını değiştirin.",
+    "grades": [
+      9
+    ],
+    "topic": "Basınç",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 9,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "bernoulli",
+    "title": "Süreklilik ve Bernoulli",
+    "desc": "Yatay boruda kesit daralınca hız ve basınç değişimini inceleyin.",
+    "grades": [
+      9
+    ],
+    "topic": "Basınç",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 9,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "genlesme",
+    "title": "Isıl Genleşme",
+    "desc": "Malzeme ve sıcaklık farkından çubuğun boy değişimini hesaplayın.",
+    "grades": [
+      6,
+      9
+    ],
+    "topic": "Isı",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 6,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 9,
+        "role": "destekleyici",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "seri-paralel",
+    "title": "Seri ve Paralel Devreler",
+    "desc": "İki direnci seri ve paralel bağlayıp akım ve gerilimleri karşılaştırın.",
+    "grades": [
+      8,
+      10
+    ],
+    "topic": "Elektrik",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 8,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 10,
+        "role": "dogrudan",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "elektrik-guc",
+    "title": "Elektrik Gücü ve Enerji Tasarrufu",
+    "desc": "Cihaz gücü ve kullanım süresinden enerji tüketimini karşılaştırın.",
+    "grades": [
+      8,
+      10
+    ],
+    "topic": "Enerji",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 8,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 10,
+        "role": "dogrudan",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "su-dalgalari",
+    "title": "Su Dalgaları ve Girişim",
+    "desc": "İki eş fazlı kaynağın su yüzeyinde oluşturduğu düğüm ve karın bölgelerini görün.",
+    "grades": [
+      10,
+      12
+    ],
+    "topic": "Dalgalar",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 10,
+        "role": "destekleyici",
+        "level": "ileri"
+      },
+      {
+        "grade": 12,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "duran-dalga",
+    "title": "Duran Dalgalar ve Rezonans",
+    "desc": "İki ucu sabit telde harmonik sayısı, boy ve hızın rezonans frekansını inceleyin.",
+    "grades": [
+      10,
+      12
+    ],
+    "topic": "Dalgalar",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 10,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 12,
+        "role": "destekleyici",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "doppler",
+    "title": "Doppler Etkisi",
+    "desc": "Hareketli kaynak ve gözlemcinin duyulan frekansa etkisini karşılaştırın.",
+    "grades": [
+      12
+    ],
+    "topic": "Dalgalar",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 12,
+        "role": "destekleyici",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "kavramsal-model",
+    "curriculumStatus": "destekleyici"
+  },
+  {
+    "id": "em-spektrum",
+    "title": "Elektromanyetik Spektrum",
+    "desc": "Dalga boyunu değiştirerek frekans, foton enerjisi ve tayf bölgesini izleyin.",
+    "grades": [
+      12
+    ],
+    "topic": "Dalgalar",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 12,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "manyetik-kuvvet",
+    "title": "Manyetik Alanda Yüklü Parçacık",
+    "desc": "Yük işareti, hız ve alanla dairesel yörüngeyi değiştirin.",
+    "grades": [
+      11
+    ],
+    "topic": "Elektrik",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 11,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "induksiyon",
+    "title": "Faraday İndüksiyonu ve Lenz Yasası",
+    "desc": "Dönen bobinde manyetik akı ve indüklenen gerilimi gözlemleyin.",
+    "grades": [
+      11
+    ],
+    "topic": "Elektrik",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 11,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "transformator",
+    "title": "Transformatör",
+    "desc": "Sarım oranıyla alternatif gerilim ve akımın dönüşümünü inceleyin.",
+    "grades": [
+      11
+    ],
+    "topic": "Elektrik",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 11,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "acisal-momentum",
+    "title": "Açısal Momentumun Korunumu",
+    "desc": "Dönen sistemde kütleleri eksene yaklaştırıp açısal hız değişimini görün.",
+    "grades": [
+      12
+    ],
+    "topic": "Hareket",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 12,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "yuvarlanma",
+    "title": "Kaymadan Yuvarlanma",
+    "desc": "Halka ve dolu diskin eğimde öteleme–dönme enerjisini karşılaştırın.",
+    "grades": [
+      12
+    ],
+    "topic": "Hareket",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 12,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "kutlecekim",
+    "title": "Kütleçekim ve Uydu Hızı",
+    "desc": "Dünya üzerindeki yükseklikle g, dairesel uydu hızı ve periyodu değiştirin.",
+    "grades": [
+      12
+    ],
+    "topic": "Uzay",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 12,
+        "role": "destekleyici",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "kavramsal-model",
+    "curriculumStatus": "destekleyici"
+  },
+  {
+    "id": "ozel-gorelilik",
+    "title": "Özel Görelilik",
+    "desc": "Işık hızına yaklaşırken zaman aralığı, uzunluk ve enerjiyi karşılaştırın.",
+    "grades": [
+      12
+    ],
+    "topic": "Modern fizik",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 12,
+        "role": "destekleyici",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "kavramsal-model",
+    "curriculumStatus": "ileri-duzey"
+  },
+  {
+    "id": "atom-spektrumu",
+    "title": "Bohr Modeli ve Hidrojen Tayfı",
+    "desc": "Hidrojen enerji seviyeleri arasındaki geçişin fotonunu bulun.",
+    "grades": [
+      12
+    ],
+    "topic": "Modern fizik",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 12,
+        "role": "destekleyici",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "kavramsal-model",
+    "curriculumStatus": "ileri-duzey"
+  },
+  {
+    "id": "compton",
+    "title": "Compton Saçılması",
+    "desc": "Fotonun saçılma açısıyla dalga boyu ve enerji değişimini inceleyin.",
+    "grades": [
+      12
+    ],
+    "topic": "Modern fizik",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 12,
+        "role": "destekleyici",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "kavramsal-model",
+    "curriculumStatus": "ileri-duzey"
+  },
+  {
+    "id": "de-broglie",
+    "title": "Madde Dalgaları",
+    "desc": "Elektronun hızından momentumunu ve de Broglie dalga boyunu bulun.",
+    "grades": [
+      12
+    ],
+    "topic": "Modern fizik",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 12,
+        "role": "destekleyici",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "kavramsal-model",
+    "curriculumStatus": "ileri-duzey"
+  },
+  {
+    "id": "radyoaktivite",
+    "title": "Radyoaktif Bozunma ve Yarı Ömür",
+    "desc": "Başlangıç çekirdek sayısı ve yarı ömürle beklenen bozunmayı izleyin.",
+    "grades": [
+      12
+    ],
+    "topic": "Modern fizik",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 12,
+        "role": "destekleyici",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "kavramsal-model",
+    "curriculumStatus": "ileri-duzey"
+  },
+  {
+    "id": "nukleer-enerji",
+    "title": "Çekirdek Enerjisi, Fisyon ve Füzyon",
+    "desc": "Kütle eksilmesinin açığa çıkan enerjiye dönüşümünü karşılaştırın.",
+    "grades": [
+      12
+    ],
+    "topic": "Modern fizik",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 12,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "yariiletken",
+    "title": "Diyot ve Yarı İletken",
+    "desc": "Diyotun yönlü iletimini bir seri direnç devresinde gözlemleyin.",
+    "grades": [
+      12
+    ],
+    "topic": "Modern fizik",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 12,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "superiletken",
+    "title": "Süper İletkenlik ve Kritik Sıcaklık",
+    "desc": "İdeal malzemenin kritik sıcaklık altında direnç değişimini izleyin.",
+    "grades": [
+      12
+    ],
+    "topic": "Modern fizik",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 12,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "gunes-yapisi",
+    "title": "Güneş’in Yapısı ve Dönmesi",
+    "desc": "Güneş’in katmanlarını seçin ve dönme hareketini izleyin.",
+    "grades": [
+      5
+    ],
+    "topic": "Uzay",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 5,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "etkilesimli-sema",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "biyocesitlilik",
+    "title": "Biyoçeşitlilik ve Habitat",
+    "desc": "Habitat kaybıyla örnek topluluktaki tür dağılımını karşılaştırın.",
+    "grades": [
+      6
+    ],
+    "topic": "Çevre",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 6,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "etkilesimli-sema",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "saf-madde",
+    "title": "Element, Bileşik ve Karışım",
+    "desc": "Tanecik modelinden saf madde ve karışımları ayırt edin.",
+    "grades": [
+      7,
+      8
+    ],
+    "topic": "Madde",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 7,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 8,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "siniflandirma-etkinligi",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "cozunme-hizi",
+    "title": "Çözünme Hızını Etkileyen Etmenler",
+    "desc": "Karıştırma, sıcaklık ve tanecik boyutunu tek tek değiştirerek çözünmeyi karşılaştırın.",
+    "grades": [
+      7
+    ],
+    "topic": "Madde",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 7,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "atmosfer-basinci",
+    "title": "Açık Hava Basıncı ve Barometre",
+    "desc": "Yükseklik ve barometre sıvısına göre denge sütununu inceleyin.",
+    "grades": [
+      9
+    ],
+    "topic": "Basınç",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 9,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "ozisi",
+    "title": "Öz Isı, Isı Sığası ve Sıcaklık",
+    "desc": "Aynı enerjinin farklı kütle ve maddelerdeki sıcaklık etkisini inceleyin.",
+    "grades": [
+      9
+    ],
+    "topic": "Isı",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 9,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "isi-aktarimi",
+    "title": "İletim, Taşınım ve Işınım",
+    "desc": "Isı aktarım yollarını seçerek enerji akışını karşılaştırın.",
+    "grades": [
+      5,
+      9
+    ],
+    "topic": "Isı",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 5,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 9,
+        "role": "dogrudan",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "limit-hiz",
+    "title": "Hava Direnci ve Limit Hız",
+    "desc": "Düşen cismin kütlesi ve direnç katsayısıyla limit hıza yaklaşımını inceleyin.",
+    "grades": [
+      11
+    ],
+    "topic": "Hareket",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 11,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "pil-baglama",
+    "title": "Üreteçler, Kısa Devre ve İç Direnç",
+    "desc": "Özdeş pilleri seri veya paralel bağlayıp yük akımını hesaplayın.",
+    "grades": [
+      10
+    ],
+    "topic": "Elektrik",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 10,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "dalga-kirilma",
+    "title": "Su Dalgalarında Yansıma ve Kırılma",
+    "desc": "Derinlik geçişinde su dalgasının hız, dalga boyu ve yönünü değiştirin.",
+    "grades": [
+      10
+    ],
+    "topic": "Dalgalar",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 10,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "deprem-rezonans",
+    "title": "Rezonans ve Yapı Salınımı",
+    "desc": "Zorlama frekansı ve sönümün ideal yapının salınımına etkisini görün.",
+    "grades": [
+      10
+    ],
+    "topic": "Dalgalar",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 10,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "aydinlanma",
+    "title": "Işık Akısı ve Aydınlanma",
+    "desc": "Kaynak şiddeti, uzaklık ve yüzey eğimiyle aydınlanmayı değiştirin.",
+    "grades": [
+      11
+    ],
+    "topic": "Optik",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 11,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "gorunur-derinlik",
+    "title": "Görünür Derinlik ve Fiber Optik",
+    "desc": "Sudaki cismin görünür derinliğini ve fiberde kritik açıyı karşılaştırın.",
+    "grades": [
+      11
+    ],
+    "topic": "Optik",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 11,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "prizma",
+    "title": "Prizma ve Işığın Renklerine Ayrılması",
+    "desc": "Prizma tepe açısıyla renklerin minimum sapmasını karşılaştırın.",
+    "grades": [
+      11
+    ],
+    "topic": "Optik",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 11,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "kirinim",
+    "title": "Tek Yarıkta Kırınım",
+    "desc": "Yarık genişliğinin ışık kırınım desenine etkisini inceleyin.",
+    "grades": [
+      12
+    ],
+    "topic": "Dalgalar",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 12,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "siyah-cisim",
+    "title": "Siyah Cisim Işıması",
+    "desc": "Sıcaklıkla tayf tepesinin ve toplam ışınım gücünün değişimini izleyin.",
+    "grades": [
+      12
+    ],
+    "topic": "Modern fizik",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 12,
+        "role": "dogrudan",
+        "level": "temel"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  },
+  {
+    "id": "temel-parcaciklar",
+    "title": "Temel Parçacıklar ve Kuvvetler",
+    "desc": "Proton, nötron ve leptonları yapı ve yükleriyle karşılaştırın.",
+    "grades": [
+      9,
+      12
+    ],
+    "topic": "Modern fizik",
+    "isNew": true,
+    "gradeUsage": [
+      {
+        "grade": 9,
+        "role": "dogrudan",
+        "level": "temel"
+      },
+      {
+        "grade": 12,
+        "role": "dogrudan",
+        "level": "ileri"
+      }
+    ],
+    "moduleType": "sanal-deney",
+    "curriculumStatus": "dogrudan"
+  }
+]

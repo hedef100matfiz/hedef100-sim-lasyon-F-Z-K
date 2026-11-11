@@ -1,0 +1,20 @@
+/* Small shared additions; original page styles remain authoritative. */
+.lab-note {box-sizing:border-box;max-width:1380px;margin:24px auto;padding:14px 18px;border:1px solid rgba(148,163,184,.25);border-radius:12px;background:rgba(15,23,42,.85);color:#cbd5e1;font:14px/1.65 Inter,Arial,sans-serif;width:calc(100% - 32px);}
+.lab-note summary{cursor:pointer;color:#fbbf24;font-weight:600;}.lab-note p{margin-top:10px;}
+.lab-controls{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0;}.lab-controls button{padding:10px 14px;border:1px solid #64748b;border-radius:8px;color:#f8fafc;background:#1e293b;cursor:pointer;font:inherit;}
+.lab-motion{position:relative;max-width:1380px;margin:8px auto;padding:0 16px;}
+:focus-visible{outline:2px solid #fbbf24;outline-offset:4px;}
+canvas{max-width:100%;} #simCanvas{touch-action:none;}
+.panel,.controls-panel,.visual-panel,.analysis-panel{min-width:0;}
+@media(max-width:600px){.lab-note{font-size:13px}.lab-controls button{min-height:44px}input[type=range]{min-height:30px;max-width:100%}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition-duration:0s!important;}}
+@media(max-width:600px){
+ .app-container,.container{padding:20px!important;min-width:0;}
+ h1{font-size:1.85rem!important;overflow-wrap:anywhere;}
+ .actions,.controls-header,.status-displays{flex-wrap:wrap;gap:10px;}
+ .actions .btn{min-width:0;flex:1 1 110px;padding:12px 8px;}
+ .top-nav{gap:12px;flex-wrap:wrap;}
+ .panel{padding:18px!important;}
+ .controls-panel h2{flex-wrap:wrap;}
+ .thermo-label{left:auto;right:-15px;}
+}

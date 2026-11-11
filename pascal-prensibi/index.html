@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pascal Prensibi ve Su Cenderesi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="../vendor/fonts.css" rel="stylesheet">
+    <script src="../vendor/lucide.min.js"></script>
+<link rel="stylesheet" href="../shared/lab.css">
+<script src="../shared/lab.js" defer></script>
+<link rel="stylesheet" href="../shared/curriculum.css"></head>
+<body data-lab="pascal-prensibi">
+    <nav class="top-nav">
+        <a href="../index.html" class="back-link"><i data-lucide="arrow-left"></i> Portala Dön</a>
+        <div class="logo">
+            <i data-lucide="atom"></i>
+            <span>Ahmet Hoca</span>
+        </div>
+    </nav>
+
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Pascal Prensibi ve Su Cenderesi</h1>
+            <p>Sıvıların basıncı her yöne eşit iletmesini ve cenderelerde kuvvet kazancını interaktif olarak deneyimleyin.</p>
+        </header><section class="curriculum-meta" data-module-id="pascal-prensibi" data-module-type="sanal-deney" data-curriculum-status="dogrudan" aria-label="Sınıf ve program kullanım bilgisi"><div class="curriculum-meta-heading"><h2>Sınıf ve program kullanımı</h2><span class="curriculum-type">Sanal deney</span></div><p class="curriculum-status-line"><strong>Ünite bağlantılı</strong></p><ul class="curriculum-grade-list"><li data-grade="9" data-role="dogrudan" data-level="temel"><strong>9. sınıf</strong><span>Temel düzey · doğrudan ünite bağlantısı</span></li></ul><p class="curriculum-status-note">En az bir sınıf için ünite/temel konu bağlantısı vardır. Diğer sınıf etiketleri destekleyici kullanım olabilir; bu bilgi kazanım bazlı resmî uygunluk onayı değildir.</p></section>
+
+        <main class="main-grid">
+            
+            <!-- Left: Controls -->
+            <section class="panel controls-panel">
+                <h2><i data-lucide="sliders-horizontal"></i> Kullanıcı Değişkenleri</h2>
+                
+                <div class="controls-content">
+                    <div class="slider-group">
+                        <label>1. Piston Yüzey Alanı (S₁): <span id="s1Label">5</span> cm²</label>
+                        <input type="range" id="s1Input" min="1" max="10" step="1" value="5">
+                    </div>
+
+                    <div class="slider-group">
+                        <label>Uygulanan Kuvvet (F₁): <span id="f1Label">20</span> N</label>
+                        <input type="range" id="f1Input" min="10" max="100" step="5" value="20">
+                    </div>
+                    
+                    <hr class="divider">
+
+                    <div class="slider-group">
+                        <label>2. Piston Yüzey Alanı (S₂): <span id="s2Label">50</span> cm²</label>
+                        <input type="range" id="s2Input" min="10" max="100" step="5" value="50">
+                    </div>
+
+                    <div class="slider-group">
+                        <label>Yük Ağırlığı (G): <span id="gLabel">200</span> N</label>
+                        <input type="range" id="gInput" min="100" max="1000" step="10" value="200">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Center: Visuals -->
+            <section class="panel visual-panel">
+                <h2><i data-lucide="droplets"></i> İnteraktif Su Cenderesi</h2>
+                
+                <div class="simulation-area">
+                    
+                    <!-- Structural U-Tube -->
+                    <div class="u-tube-container">
+                        
+                        <!-- Left Tube (S1) -->
+                        <div class="tube tube-left" id="tube1">
+                            <div class="liquid liquid-left"></div>
+                            <div class="piston" id="piston1">
+                                <div class="force-arrow down">
+                                    <span id="visF1">20 N</span>
+                                    <i data-lucide="arrow-down"></i>
+                                </div>
+                            </div>
+                            <div class="h-indicator h-left" id="h1Marker">
+                                <span class="h-text">h₁</span>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Connection -->
+                        <div class="tube-bottom">
+                            <div class="liquid liquid-bottom"></div>
+                            <!-- Pascal animation arrows -->
+                            <div class="pascal-arrows">
+                                <i data-lucide="arrow-right" class="arr p-arr1"></i>
+                                <i data-lucide="arrow-right" class="arr p-arr2"></i>
+                                <i data-lucide="arrow-right" class="arr p-arr3"></i>
+                            </div>
+                        </div>
+
+                        <!-- Right Tube (S2) -->
+                        <div class="tube tube-right" id="tube2">
+                            <div class="liquid liquid-right"></div>
+                            <div class="piston" id="piston2">
+                                <div class="load-box">
+                                    <i data-lucide="car"></i>
+                                    <span id="visG">200 N</span>
+                                </div>
+                            </div>
+                            <div class="h-indicator h-right" id="h2Marker">
+                                <span class="h-text">h₂</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right: Analysis -->
+            <section class="panel analysis-panel">
+                <h2><i data-lucide="activity"></i> Analiz Paneli</h2>
+                
+                <div class="analysis-content">
+                    
+                    <div class="status-box" id="statusBox">
+                        <div class="status-icon"><i data-lucide="scale"></i></div>
+                        <div class="status-text" id="statusText">SİSTEM DENGEDE</div>
+                    </div>
+
+                    <div class="pressure-cards">
+                        <div class="p-card">
+                            <div class="p-title">Giriş: F₁ / S₁</div>
+                            <div class="p-formula">F₁ / S₁</div>
+                            <div class="p-value" id="valP1">4.0</div>
+                            <div class="p-unit">N/cm²</div>
+                        </div>
+                        <div class="p-card">
+                            <div class="p-title">Yük Gereksinimi: G / S₂</div>
+                            <div class="p-formula">G / S₂</div>
+                            <div class="p-value" id="valP2">4.0</div>
+                            <div class="p-unit">N/cm²</div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <i data-lucide="info"></i>
+                        <p><strong>Pascal Prensibi:</strong> Kapalı kaplardaki sıvılar, üzerlerine uygulanan basıncı her yöne aynen iletir. Basınçlar eşitlendiğinde sistem dengeye gelir.</p>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <details class="lab-note"><summary>Deneyin modeli ve kullanım notları</summary><p>İdeal hidrolik sistem: F₂=F₁S₂/S₁; S₁Δh₁=S₂Δh₂. Piston ağırlığı, sürtünme ve yükseklik kaynaklı hidrostatik basınç farkı ihmal edilir. Sağ gösterge yükü taşımak için gereken G/S₂ basıncıdır. Piston konumu hareket yönünü ve hacim oranını gösterir; zamana bağlı hareket hesabı değildir. Renk sıcaklığı değil basıncı temsil eder.</p></details>
+<script src="script.js"></script>
+</body>
+</html>
