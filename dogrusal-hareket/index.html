@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doğrusal Hareket (Sabit Hızlı ve İvmeli Hareket)</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="../vendor/fonts.css" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="../vendor/chart.umd.js"></script>
+    <!-- Lucide Icons -->
+    <script src="../vendor/lucide.min.js"></script>
+<link rel="stylesheet" href="../shared/lab.css">
+<script src="../shared/lab.js" defer></script>
+<link rel="stylesheet" href="../shared/curriculum.css"></head>
+<body data-lab="dogrusal-hareket">
+    <nav class="top-nav">
+        <a href="../index.html" class="back-link"><i data-lucide="arrow-left"></i> Portala Dön</a>
+        <div class="logo">
+            <i data-lucide="atom"></i>
+            <span>Ahmet Hoca</span>
+        </div>
+    </nav>
+
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Doğrusal Hareket</h1>
+            <p>Sabit hızlı ve ivmeli hareketin (Kinematik) grafiklerle anlık analizini yapın.</p>
+        </header><section class="curriculum-meta" data-module-id="dogrusal-hareket" data-module-type="sanal-deney" data-curriculum-status="dogrudan" aria-label="Sınıf ve program kullanım bilgisi"><div class="curriculum-meta-heading"><h2>Sınıf ve program kullanımı</h2><span class="curriculum-type">Sanal deney</span></div><p class="curriculum-status-line"><strong>Ünite bağlantılı</strong></p><ul class="curriculum-grade-list"><li data-grade="6" data-role="dogrudan" data-level="temel"><strong>6. sınıf</strong><span>Temel düzey · doğrudan ünite bağlantısı</span></li><li data-grade="9" data-role="dogrudan" data-level="ileri"><strong>9. sınıf</strong><span>İleri düzey · doğrudan ünite bağlantısı</span></li><li data-grade="10" data-role="dogrudan" data-level="ileri"><strong>10. sınıf</strong><span>İleri düzey · doğrudan ünite bağlantısı</span></li></ul><p class="curriculum-status-note">En az bir sınıf için ünite/temel konu bağlantısı vardır. Diğer sınıf etiketleri destekleyici kullanım olabilir; bu bilgi kazanım bazlı resmî uygunluk onayı değildir.</p></section>
+
+        <!-- Top Section: Simulation Track -->
+        <section class="panel track-panel">
+            <div class="track-header">
+                <h2><i data-lucide="map"></i> Simülasyon Alanı</h2>
+                <div class="timer">Süre: <span id="timeElapsed">0.0</span> sn</div>
+            </div>
+            
+            <div class="track-container" id="trackContainer">
+                <div class="road">
+                    <!-- Distance markers -->
+                    <div class="marker m0">0m</div>
+                    <div class="marker m20">20m</div>
+                    <div class="marker m40">40m</div>
+                    <div class="marker m60">60m</div>
+                    <div class="marker m80">80m</div>
+                    <div class="marker m100">100m</div>
+                </div>
+                
+                <!-- The Car -->
+                <div class="car" id="carVisual">
+                    <i data-lucide="car-front"></i>
+                    <div class="car-label" id="carLabel">x: 0.0 m</div>
+                </div>
+                
+                <!-- Motion Trail -->
+                <div class="trail" id="carTrail"></div>
+            </div>
+        </section>
+
+        <!-- Bottom Section: Graphs & Controls -->
+        <main class="bottom-grid">
+            <!-- Left: Graphs -->
+            <section class="panel graphs-panel">
+                <h2><i data-lucide="activity"></i> Gerçek Zamanlı Grafikler</h2>
+                
+                <div class="graphs-container">
+                    <div class="graph-box">
+                        <canvas id="chartX"></canvas>
+                        <div class="graph-note">v₀ Sürgüsü İle Değişen Eğrilik</div>
+                    </div>
+                    <div class="graph-box">
+                        <canvas id="chartV"></canvas>
+                    </div>
+                    <div class="graph-box">
+                        <canvas id="chartA"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right: Controls -->
+            <section class="panel controls-panel">
+                <h2><i data-lucide="sliders-horizontal"></i> Kullanıcı Değişkenleri (Girdiler)</h2>
+                
+                <div class="controls-content">
+                    <div class="slider-group">
+                        <label>İlk Konum (x₀): <span id="x0Label">0</span> m</label>
+                        <input type="range" id="x0Input" min="0" max="50" step="1" value="0">
+                    </div>
+                    
+                    <div class="slider-group">
+                        <label>İlk Hız (v₀): <span id="v0Label">10</span> m/s</label>
+                        <input type="range" id="v0Input" min="-20" max="40" step="1" value="10">
+                    </div>
+
+                    <div class="slider-group">
+                        <label>İvme (a): <span id="aLabel">4</span> m/s²</label>
+                        <input type="range" id="aInput" min="-10" max="20" step="1" value="4">
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button id="btnStart" class="btn btn-primary"><i data-lucide="play"></i> BAŞLAT</button>
+                    <button id="btnStop" class="btn btn-secondary" disabled><i data-lucide="pause"></i> DURDUR</button>
+                    <button id="btnReset" class="btn btn-danger"><i data-lucide="rotate-ccw"></i> SIFIRLA</button>
+                </div>
+                
+                <div class="result-card green-highlight">
+                    <div class="result-value" id="currentX">0.0 <small>m</small></div>
+                    <div class="result-label">Anlık Konum (x)</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <details class="lab-note"><summary>Deneyin modeli ve kullanım notları</summary><p>Sabit ivmeli, tek boyutlu hareket: x=x₀+v₀t+at²/2 ve v=v₀+at. Pist sınırında deney durur. Yeniden ayarlamak için Sıfırla düğmesini kullanın.</p></details>
+<script src="script.js"></script>
+</body>
+</html>

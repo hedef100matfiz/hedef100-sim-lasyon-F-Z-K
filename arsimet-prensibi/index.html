@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arşimet Prensibi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="../vendor/fonts.css" rel="stylesheet">
+    <script src="../vendor/lucide.min.js"></script>
+<link rel="stylesheet" href="../shared/lab.css">
+<script src="../shared/lab.js" defer></script>
+<link rel="stylesheet" href="../shared/curriculum.css"></head>
+<body data-lab="arsimet-prensibi">
+    <nav class="top-nav">
+        <a href="../index.html" class="back-link"><i data-lucide="arrow-left"></i> Portala Dön</a>
+        <div class="logo">
+            <i data-lucide="atom"></i>
+            <span>Ahmet Hoca</span>
+        </div>
+    </nav>
+
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Arşimet Prensibi (Kaldırma Kuvveti)</h1>
+            <p>Dinamometreye asılı cismi sıvıya daldırarak görünür ağırlıktaki azalmayı ve vektörleri inceleyin.</p>
+        </header><section class="curriculum-meta" data-module-id="arsimet-prensibi" data-module-type="sanal-deney" data-curriculum-status="dogrudan" aria-label="Sınıf ve program kullanım bilgisi"><div class="curriculum-meta-heading"><h2>Sınıf ve program kullanımı</h2><span class="curriculum-type">Sanal deney</span></div><p class="curriculum-status-line"><strong>Ünite bağlantılı</strong></p><ul class="curriculum-grade-list"><li data-grade="9" data-role="dogrudan" data-level="temel"><strong>9. sınıf</strong><span>Temel düzey · doğrudan ünite bağlantısı</span></li></ul><p class="curriculum-status-note">En az bir sınıf için ünite/temel konu bağlantısı vardır. Diğer sınıf etiketleri destekleyici kullanım olabilir; bu bilgi kazanım bazlı resmî uygunluk onayı değildir.</p></section>
+
+        <main class="main-grid">
+            
+            <!-- Left: Controls -->
+            <section class="panel controls-panel">
+                <h2><i data-lucide="sliders-horizontal"></i> Kullanıcı Değişkenleri</h2>
+                
+                <div class="controls-content">
+                    <div class="slider-group">
+                        <label>Cismin Kütlesi (m): <span id="mLabel">4.0</span> kg</label>
+                        <input type="range" id="mInput" min="1" max="20" step="0.5" value="4">
+                    </div>
+
+                    <div class="slider-group">
+                        <label>Cismin Hacmi (V): <span id="vLabel">2.0</span> L (dm³)</label>
+                        <input type="range" id="vInput" min="1" max="10" step="0.5" value="2">
+                    </div>
+                    
+                    <div class="density-box">
+                        <div class="d-label">Cismin Özkütlesi (d = m/V)</div>
+                        <div class="d-val"><span id="dObjLabel" class="neon-text">2.00</span> kg/L</div>
+                        <div class="d-mat" id="matLabel">Metal (Batar)</div>
+                    </div>
+
+                    <hr class="divider">
+
+                    <div class="slider-group">
+                        <label>Sıvının Özkütlesi (d_sıvı): <span id="dLiqLabel">1.0</span> kg/L</label>
+                        <input type="range" id="dLiqInput" min="0.5" max="2.0" step="0.1" value="1.0">
+                    </div>
+
+                    <div class="slider-group depth-control">
+                        <label>Dinamometre İpini İndir (%): <span id="depthLabel">0</span>%</label>
+                        <input type="range" id="depthInput" min="0" max="100" step="1" value="0">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Center: Visuals -->
+            <section class="panel visual-panel">
+                <h2><i data-lucide="anchor"></i> Sıvı Tankı Simülasyonu</h2>
+                
+                <div class="simulation-area">
+                    
+                    <!-- Dynamometer hanging from top -->
+                    <div class="dynamometer-container">
+                        <div class="dyn-body">
+                            <span id="dynScreen">40 N</span>
+                        </div>
+                        <div class="dyn-hook"></div>
+                    </div>
+
+                    <!-- The String -->
+                    <svg class="string-svg" viewBox="0 0 100 400" preserveAspectRatio="none">
+                        <!-- Path dynamically updated via JS -->
+                        <path id="ropePath" d="M 50 0 L 50 200" stroke="#94a3b8" stroke-width="2" fill="none" stroke-dasharray="4"/>
+                    </svg>
+
+                    <!-- The Block -->
+                    <div class="block" id="block">
+                        <div class="block-texture" id="blockTexture"></div>
+                        <!-- Vectors -->
+                        <div class="vector-arrow v-down" id="vecG">
+                            <span>G</span><i data-lucide="arrow-down"></i>
+                        </div>
+                        <div class="vector-arrow v-up" id="vecFk">
+                            <span>F_k</span><i data-lucide="arrow-up"></i>
+                        </div>
+                    </div>
+
+                    <!-- The Tank -->
+                    <div class="tank">
+                        <div class="tank-liquid" id="tankLiquid">
+                            <!-- CSS waves -->
+                            <div class="wave wave1"></div>
+                            <div class="wave wave2"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Right: Analysis -->
+            <section class="panel analysis-panel">
+                <h2><i data-lucide="activity"></i> Analiz Paneli</h2>
+                
+                <div class="analysis-content">
+                    
+                    <div class="status-box" id="statusBox">
+                        <div class="status-icon"><i data-lucide="info"></i></div>
+                        <div class="status-text" id="statusText">DİNAMOMETREDE ASILI</div>
+                    </div>
+
+                    <div class="calc-card">
+                        <div class="calc-row">
+                            <span>Ağırlık (G = m·g)</span>
+                            <strong id="valG">40 N</strong>
+                        </div>
+                        <div class="calc-row">
+                            <span style="color: var(--color-green)">Kaldırma Kuv. (F_k = V_batan·d_sıvı·g)</span>
+                            <strong id="valFk" style="color: var(--color-green)">0 N</strong>
+                        </div>
+                    </div>
+
+                    <div class="result-display">
+                        <div class="result-label">Görünür Ağırlık (T = G - F_k)</div>
+                        <div class="result-value" id="valT">40 N</div>
+                        
+                        <!-- Bar Graph for T -->
+                        <div class="bar-container">
+                            <div class="bar-fill" id="tBar"></div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <i data-lucide="info"></i>
+                        <p>Cisim sıvıya daldıkça, yerini değiştirdiği sıvının ağırlığı kadar bir <strong>kaldırma kuvvetine (F_k)</strong> maruz kalır ve görünür ağırlığı (T) azalır.</p>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <details class="lab-note"><summary>Deneyin modeli ve kullanım notları</summary><p>Dinamometreyle yavaşça indirilen cisim: Fₖ=ρsıvı g Vbatan, T=max(0,mg−Fₖ). g=10 N/kg. Yoğunluklar eşitse tam batmış cisim farklı derinliklerde askıda kalabilir. Sürgü tabana teması kapsamaz; kaldırma kuvveti ve ip gerilmesi incelenir.</p></details>
+<script src="script.js"></script>
+</body>
+</html>

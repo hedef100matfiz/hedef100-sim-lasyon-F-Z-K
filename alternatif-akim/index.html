@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternatif Akım ve RLC Devreleri</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="../vendor/fonts.css" rel="stylesheet">
+    <script src="../vendor/lucide.min.js"></script>
+<link rel="stylesheet" href="../shared/lab.css">
+<script src="../shared/lab.js" defer></script>
+<link rel="stylesheet" href="../shared/curriculum.css"></head>
+<body data-lab="alternatif-akim">
+    <nav class="top-nav">
+        <a href="../index.html" class="back-link"><i data-lucide="arrow-left"></i> Portala Dön</a>
+        <div class="logo">
+            <i data-lucide="atom"></i>
+            <span>Ahmet Hoca</span>
+        </div>
+    </nav>
+
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Alternatif Akım (RLC Devreleri) ve Rezonans</h1>
+            <p>Osiloskop ekranında gerilim ve akım dalgalarının faz farkını izleyin, empedans üçgeniyle rezonans anını yakalayın.</p>
+        </header><section class="curriculum-meta" data-module-id="alternatif-akim" data-module-type="sanal-deney" data-curriculum-status="dogrudan" aria-label="Sınıf ve program kullanım bilgisi"><div class="curriculum-meta-heading"><h2>Sınıf ve program kullanımı</h2><span class="curriculum-type">Sanal deney</span></div><p class="curriculum-status-line"><strong>Ünite bağlantılı</strong></p><ul class="curriculum-grade-list"><li data-grade="11" data-role="dogrudan" data-level="temel"><strong>11. sınıf</strong><span>Temel düzey · doğrudan ünite bağlantısı</span></li></ul><p class="curriculum-status-note">En az bir sınıf için ünite/temel konu bağlantısı vardır. Diğer sınıf etiketleri destekleyici kullanım olabilir; bu bilgi kazanım bazlı resmî uygunluk onayı değildir.</p></section>
+
+        <main class="main-grid">
+            
+            <!-- Left: Controls -->
+            <section class="panel controls-panel">
+                <h2><i data-lucide="sliders-horizontal"></i> Devre Parametreleri</h2>
+                
+                <div class="controls-content">
+                    
+                    <div class="slider-group">
+                        <label>Direnç (R): <span id="rLabel">50</span> Ω</label>
+                        <input type="range" id="rInput" min="10" max="100" step="1" value="50">
+                    </div>
+
+                    <div class="slider-group">
+                        <label>İndüktans (L): <span id="lLabel">0.2</span> H</label>
+                        <input type="range" id="lInput" min="0.1" max="2.0" step="0.1" value="0.2">
+                    </div>
+
+                    <div class="slider-group">
+                        <label>Kapasitans (C): <span id="cLabel">5</span> μF</label>
+                        <input type="range" id="cInput" min="1" max="50" step="1" value="5">
+                    </div>
+
+                    <hr class="divider">
+
+                    <div class="freq-knob-container">
+                        <label>Frekans (f): <span id="fLabel">159</span> Hz</label>
+                        <div class="knob-wrapper">
+                            <input type="range" id="fInput" min="10" max="300" step="1" value="159">
+                        </div>
+                    </div>
+
+                    <div class="fixed-val mt-2">
+                        <span>Güç Kaynağı:</span> <strong>220 V (Maksimum)</strong>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Center: Visuals -->
+            <section class="panel visual-panel">
+                <h2><i data-lucide="activity"></i> Osiloskop Ekranı</h2>
+                
+                <div class="simulation-area">
+                    <!-- Circuit Schematic overlay -->
+                    <div class="circuit-diagram">
+                        <div class="c-node">~</div>
+                        <div class="c-line"></div>
+                        <div class="c-comp" title="Direnç (R)"><i data-lucide="activity"></i> R</div>
+                        <div class="c-line"></div>
+                        <div class="c-comp" title="Bobin (L)"><i data-lucide="voicemail"></i> L</div>
+                        <div class="c-line"></div>
+                        <div class="c-comp" title="Kapasitör (C)"><i data-lucide="pause"></i> C</div>
+                        <div class="c-line"></div>
+                    </div>
+                    
+                    <canvas id="simCanvas" width="800" height="350"></canvas>
+                    
+                    <!-- Empedans Vektör Kutusu -->
+                    <div class="vector-box">
+                        <div class="vb-title">Empedans Üçgeni (Z)</div>
+                        <canvas id="vectorCanvas" width="150" height="150"></canvas>
+                    </div>
+                </div>
+                
+                <div class="legend-row">
+                    <span class="l-item v-color"><span class="l-dot"></span> Gerilim (V)</span>
+                    <span class="l-item i-color"><span class="l-dot"></span> Akım (I)</span>
+                </div>
+            </section>
+
+            <!-- Right: Analysis -->
+            <section class="panel analysis-panel">
+                <h2><i data-lucide="cpu"></i> RLC Analizi</h2>
+                
+                <div class="analysis-content">
+                    
+                    <div class="sensor-card">
+                        <div class="s-title">Faz Açısı (φ)</div>
+                        <div class="s-val" id="valPhi">0°</div>
+                        <div class="s-sub" id="phiDesc">Akım ve Gerilim Aynı Fazda</div>
+                    </div>
+
+                    <div class="sensor-card">
+                        <div class="s-title">Maksimum Akım (I_max)</div>
+                        <div class="s-val" id="valI">4.4 <span class="unit">A</span></div>
+                    </div>
+
+                    <div class="resonance-alert" id="resAlert">
+                        <i data-lucide="zap"></i>
+                        <div>
+                            <strong>SİSTEM REZONANSTA</strong>
+                            <span>X_L = X_C (Empedans Min)</span>
+                        </div>
+                    </div>
+
+                    <div class="info-card mt-auto">
+                        <i data-lucide="info"></i>
+                        <p><strong>Rezonans Frekansı (f₀):</strong> İndüktif Reaktans (X_L) ile Kapasitif Reaktansın (X_C) birbirini sıfırladığı andır. Akım maksimuma ulaşır.</p>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <details class="lab-note"><summary>Deneyin modeli ve kullanım notları</summary><p>İdeal seri RLC devresi ve sinüzoidal kaynak. 220 V maksimum değerdir; etkin değer değildir. Akım göstergesi maksimum akımdır. Rezonansa yakınlık |φ|<2° ile belirtilir. Osiloskop zaman ölçeği görselleştirme için yavaşlatılmıştır.</p></details>
+<script src="script.js"></script>
+</body>
+</html>
