@@ -1,0 +1,515 @@
+[
+  {
+    "grade": 5,
+    "unit": 1,
+    "title": "1. Ünite: Gökyüzündeki Komşularımız Ve Biz",
+    "url": "https://tymm.meb.gov.tr/fen-bilimleri-dersi/unite/367",
+    "modules": [
+      "gunes-yapisi",
+      "ay-evreleri",
+      "gunes-sistemi"
+    ]
+  },
+  {
+    "grade": 5,
+    "unit": 2,
+    "title": "2. Ünite: Kuvveti Tanıyalım",
+    "url": "https://tymm.meb.gov.tr/fen-bilimleri-dersi/unite/368",
+    "modules": [
+      "dinamometre",
+      "surtunme-kuvveti"
+    ]
+  },
+  {
+    "grade": 5,
+    "unit": 3,
+    "title": "3. Ünite: Canlıların Yapısına Yolculuk",
+    "url": "https://tymm.meb.gov.tr/fen-bilimleri-dersi/unite/388",
+    "modules": [
+      "hucre",
+      "destek-hareket"
+    ]
+  },
+  {
+    "grade": 5,
+    "unit": 4,
+    "title": "4. Ünite: Işığın Dünyası",
+    "url": "https://tymm.meb.gov.tr/fen-bilimleri-dersi/unite/399",
+    "modules": [
+      "golge"
+    ]
+  },
+  {
+    "grade": 5,
+    "unit": 5,
+    "title": "5. Ünite: Maddenin Doğası",
+    "url": "https://tymm.meb.gov.tr/fen-bilimleri-dersi/unite/404",
+    "modules": [
+      "tanecikler",
+      "isi-alisverisi",
+      "hal-degisimi",
+      "isi-yalitimi",
+      "isi-aktarimi"
+    ]
+  },
+  {
+    "grade": 5,
+    "unit": 6,
+    "title": "6. Ünite: Yaşamımızdaki Elektrik",
+    "url": "https://tymm.meb.gov.tr/fen-bilimleri-dersi/unite/407",
+    "modules": [
+      "basit-devre"
+    ]
+  },
+  {
+    "grade": 5,
+    "unit": 7,
+    "title": "7. Ünite: Sürdürülebilir Yaşam Ve Geri Dönüşüm",
+    "url": "https://tymm.meb.gov.tr/fen-bilimleri-dersi/unite/408",
+    "modules": [
+      "geri-donusum"
+    ]
+  },
+  {
+    "grade": 6,
+    "unit": 1,
+    "title": "1. Ünite: Güneş Sistemi Ve Tutulmalar",
+    "url": "https://tymm.meb.gov.tr/fen-bilimleri-dersi/unite/409",
+    "modules": [
+      "gunes-sistemi",
+      "tutulmalar"
+    ]
+  },
+  {
+    "grade": 6,
+    "unit": 2,
+    "title": "2. Ünite: Kuvvetin Etkisinde Hareket",
+    "url": "https://tymm.meb.gov.tr/fen-bilimleri-dersi/unite/410",
+    "modules": [
+      "bileske-kuvvet",
+      "yol-yer-degistirme",
+      "dogrusal-hareket"
+    ]
+  },
+  {
+    "grade": 6,
+    "unit": 3,
+    "title": "3. Ünite: Canlılarda Sistemler",
+    "url": "https://tymm.meb.gov.tr/fen-bilimleri-dersi/unite/411",
+    "modules": [
+      "cimlenme",
+      "ureme-gelisme",
+      "sinir-duyu",
+      "hormonlar"
+    ]
+  },
+  {
+    "grade": 6,
+    "unit": 4,
+    "title": "4. Ünite: Işığın Yansıması Ve Renkler",
+    "url": "https://tymm.meb.gov.tr/fen-bilimleri-dersi/unite/412",
+    "modules": [
+      "yansima",
+      "kuresel-aynalar",
+      "renkler"
+    ]
+  },
+  {
+    "grade": 6,
+    "unit": 5,
+    "title": "5. Ünite: Maddenin Ayırt Edici Özellikleri",
+    "url": "https://tymm.meb.gov.tr/fen-bilimleri-dersi/unite/413",
+    "modules": [
+      "genlesme",
+      "hal-degisimi",
+      "ozkutle-karisimlar"
+    ]
+  },
+  {
+    "grade": 6,
+    "unit": 6,
+    "title": "6. Ünite: Elektriğin İletimi Ve Direnç",
+    "url": "https://tymm.meb.gov.tr/fen-bilimleri-dersi/unite/414",
+    "modules": [
+      "direnc-tel",
+      "basit-devre"
+    ]
+  },
+  {
+    "grade": 6,
+    "unit": 7,
+    "title": "7. Ünite: Sürdürülebilir Yaşam Ve Etkileşim",
+    "url": "https://tymm.meb.gov.tr/fen-bilimleri-dersi/unite/415",
+    "modules": [
+      "biyocesitlilik",
+      "geri-donusum"
+    ]
+  },
+  {
+    "grade": 7,
+    "unit": 1,
+    "title": "1. Ünite: Uzay Çağı",
+    "url": "https://tymm.meb.gov.tr/fen-bilimleri-dersi/unite/416",
+    "modules": [
+      "teleskop",
+      "yildizlar",
+      "gunes-sistemi"
+    ]
+  },
+  {
+    "grade": 7,
+    "unit": 2,
+    "title": "2. Ünite: Kuvvet Ve Enerjiyi Keşfedelim",
+    "url": "https://tymm.meb.gov.tr/fen-bilimleri-dersi/unite/429",
+    "modules": [
+      "is-guc",
+      "enerji-donusumu"
+    ]
+  },
+  {
+    "grade": 7,
+    "unit": 3,
+    "title": "3. Ünite: Vücudumuzdaki Sistemler",
+    "url": "https://tymm.meb.gov.tr/fen-bilimleri-dersi/unite/430",
+    "modules": [
+      "sindirim",
+      "dolasim",
+      "solunum",
+      "bosaltim"
+    ]
+  },
+  {
+    "grade": 7,
+    "unit": 4,
+    "title": "4. Ünite: Işığın Kırılması Ve Mercekler",
+    "url": "https://tymm.meb.gov.tr/fen-bilimleri-dersi/unite/431",
+    "modules": [
+      "kirilma",
+      "mercekler"
+    ]
+  },
+  {
+    "grade": 7,
+    "unit": 5,
+    "title": "5. Ünite: Maddenin Doğasına Yolculuk",
+    "url": "https://tymm.meb.gov.tr/fen-bilimleri-dersi/unite/432",
+    "modules": [
+      "atom",
+      "saf-madde",
+      "cozunurluk",
+      "cozunme-hizi",
+      "karisim-ayirma"
+    ]
+  },
+  {
+    "grade": 7,
+    "unit": 6,
+    "title": "6. Ünite: Elektriklenme",
+    "url": "https://tymm.meb.gov.tr/fen-bilimleri-dersi/unite/433",
+    "modules": [
+      "elektriklenme",
+      "elektrik-alan"
+    ]
+  },
+  {
+    "grade": 7,
+    "unit": 7,
+    "title": "7. Ünite: Sürdürülebilir Yaşam Ve Enerji",
+    "url": "https://tymm.meb.gov.tr/fen-bilimleri-dersi/unite/434",
+    "modules": [
+      "ekosistem",
+      "yenilenebilir",
+      "geri-donusum"
+    ]
+  },
+  {
+    "grade": 8,
+    "unit": 1,
+    "title": "1. Ünite: Mevsimler Ve İklim",
+    "url": "https://tymm.meb.gov.tr/fen-bilimleri-dersi/unite/435",
+    "modules": [
+      "mevsimler",
+      "iklim-sera"
+    ]
+  },
+  {
+    "grade": 8,
+    "unit": 2,
+    "title": "2. Ünite: Yaşamı Kolaylaştıran Kuvvet",
+    "url": "https://tymm.meb.gov.tr/fen-bilimleri-dersi/unite/436",
+    "modules": [
+      "basit-makineler",
+      "disliler",
+      "tork-denge"
+    ]
+  },
+  {
+    "grade": 8,
+    "unit": 3,
+    "title": "3. Ünite: Yaşamın Gizemi",
+    "url": "https://tymm.meb.gov.tr/fen-bilimleri-dersi/unite/437",
+    "modules": [
+      "kalitim",
+      "dogal-secilim"
+    ]
+  },
+  {
+    "grade": 8,
+    "unit": 4,
+    "title": "4. Ünite: Sesin Dünyası",
+    "url": "https://tymm.meb.gov.tr/fen-bilimleri-dersi/unite/438",
+    "modules": [
+      "ses",
+      "yanki"
+    ]
+  },
+  {
+    "grade": 8,
+    "unit": 5,
+    "title": "5. Ünite: Periyodik Tablo Ve Maddenin Etkileşimi",
+    "url": "https://tymm.meb.gov.tr/fen-bilimleri-dersi/unite/439",
+    "modules": [
+      "periyodik-tablo",
+      "kimyasal-tepkime",
+      "asit-baz",
+      "saf-madde"
+    ]
+  },
+  {
+    "grade": 8,
+    "unit": 6,
+    "title": "6. Ünite: Elektriğin Yolculuğu",
+    "url": "https://tymm.meb.gov.tr/fen-bilimleri-dersi/unite/440",
+    "modules": [
+      "seri-paralel",
+      "elektrik-guc",
+      "ohm-yasasi",
+      "yenilenebilir"
+    ]
+  },
+  {
+    "grade": 8,
+    "unit": 7,
+    "title": "7. Ünite: Sürdürülebilir Yaşam Ve Madde Döngüleri",
+    "url": "https://tymm.meb.gov.tr/fen-bilimleri-dersi/unite/441",
+    "modules": [
+      "fotosentez",
+      "madde-donguleri",
+      "iklim-sera"
+    ]
+  },
+  {
+    "grade": 9,
+    "unit": 1,
+    "title": "1. Ünite: Fizik Bilimi Ve Kariyer Keşfi",
+    "url": "https://tymm.meb.gov.tr/fizik-dersi/unite/43",
+    "modules": [
+      "olcme"
+    ]
+  },
+  {
+    "grade": 9,
+    "unit": 2,
+    "title": "2. Ünite: Kuvvet Ve Hareket",
+    "url": "https://tymm.meb.gov.tr/fizik-dersi/unite/57",
+    "modules": [
+      "olcme",
+      "bileske-kuvvet",
+      "yol-yer-degistirme",
+      "dogrusal-hareket",
+      "temel-parcaciklar"
+    ]
+  },
+  {
+    "grade": 9,
+    "unit": 3,
+    "title": "3. Ünite: Akışkanlar",
+    "url": "https://tymm.meb.gov.tr/fizik-dersi/unite/65",
+    "modules": [
+      "kati-basinci",
+      "sivi-basinci",
+      "atmosfer-basinci",
+      "arsimet-prensibi",
+      "pascal-prensibi",
+      "bernoulli",
+      "gaz-basinc"
+    ]
+  },
+  {
+    "grade": 9,
+    "unit": 4,
+    "title": "4. Ünite: Enerji",
+    "url": "https://tymm.meb.gov.tr/fizik-dersi/unite/82",
+    "modules": [
+      "isi-alisverisi",
+      "ozisi",
+      "hal-degisimi",
+      "isi-yalitimi",
+      "isi-aktarimi"
+    ]
+  },
+  {
+    "grade": 10,
+    "unit": 1,
+    "title": "1. Ünite: Kuvvet Ve Hareket",
+    "url": "https://tymm.meb.gov.tr/fizik-dersi/unite/100",
+    "modules": [
+      "dogrusal-hareket",
+      "serbest-dusme"
+    ]
+  },
+  {
+    "grade": 10,
+    "unit": 2,
+    "title": "2. Ünite: Enerji",
+    "url": "https://tymm.meb.gov.tr/fizik-dersi/unite/108",
+    "modules": [
+      "is-guc",
+      "enerji-donusumu",
+      "yenilenebilir",
+      "elektrik-guc"
+    ]
+  },
+  {
+    "grade": 10,
+    "unit": 3,
+    "title": "3. Ünite: Elektrik",
+    "url": "https://tymm.meb.gov.tr/fizik-dersi/unite/111",
+    "modules": [
+      "ohm-yasasi",
+      "seri-paralel",
+      "pil-baglama",
+      "basit-devre",
+      "direnc-tel"
+    ]
+  },
+  {
+    "grade": 10,
+    "unit": 4,
+    "title": "4. Ünite: Dalgalar",
+    "url": "https://tymm.meb.gov.tr/fizik-dersi/unite/122",
+    "modules": [
+      "harmonik-hareket",
+      "yay-dalgalari",
+      "duran-dalga",
+      "dalga-kirilma",
+      "ses",
+      "deprem-rezonans"
+    ]
+  },
+  {
+    "grade": 11,
+    "unit": 1,
+    "title": "1. Ünite: Kuvvet Ve Hareket",
+    "url": "https://tymm.meb.gov.tr/fizik-dersi/unite/243",
+    "modules": [
+      "serbest-dusme",
+      "egik-atis",
+      "newton-egik-duzlem",
+      "surtunme-kuvveti",
+      "limit-hiz",
+      "cembersel-hareket",
+      "bagil-hareket"
+    ]
+  },
+  {
+    "grade": 11,
+    "unit": 2,
+    "title": "2. Ünite: Elektrik Ve Manyetizma",
+    "url": "https://tymm.meb.gov.tr/fizik-dersi/unite/248",
+    "modules": [
+      "elektrik-alan",
+      "manyetik-alan",
+      "manyetik-kuvvet",
+      "induksiyon",
+      "transformator",
+      "alternatif-akim"
+    ]
+  },
+  {
+    "grade": 11,
+    "unit": 3,
+    "title": "3. Ünite: Optik",
+    "url": "https://tymm.meb.gov.tr/fizik-dersi/unite/259",
+    "modules": [
+      "aydinlanma",
+      "yansima",
+      "kuresel-aynalar",
+      "kirilma",
+      "gorunur-derinlik",
+      "prizma",
+      "mercekler"
+    ]
+  },
+  {
+    "grade": 12,
+    "unit": 1,
+    "title": "1. Ünite: Kuvvet Ve Hareket",
+    "url": "https://tymm.meb.gov.tr/fizik-dersi/unite/266",
+    "modules": [
+      "tork-denge",
+      "momentum-carpisma",
+      "acisal-momentum",
+      "yuvarlanma"
+    ]
+  },
+  {
+    "grade": 12,
+    "unit": 2,
+    "title": "2. Ünite: Enerji",
+    "url": "https://tymm.meb.gov.tr/fizik-dersi/unite/268",
+    "modules": [
+      "dinamometre",
+      "harmonik-hareket",
+      "enerji-donusumu",
+      "surtunme-kuvveti",
+      "yenilenebilir"
+    ]
+  },
+  {
+    "grade": 12,
+    "unit": 3,
+    "title": "3. Ünite: Dalgalar",
+    "url": "https://tymm.meb.gov.tr/fizik-dersi/unite/273",
+    "modules": [
+      "kirinim",
+      "su-dalgalari",
+      "cift-yarik",
+      "em-spektrum",
+      "renkler"
+    ]
+  },
+  {
+    "grade": 12,
+    "unit": 4,
+    "title": "4. Ünite: Madde Ve Doğası",
+    "url": "https://tymm.meb.gov.tr/fizik-dersi/unite/279",
+    "modules": [
+      "siyah-cisim",
+      "fotoelektrik",
+      "yariiletken",
+      "superiletken",
+      "temel-parcaciklar",
+      "atom",
+      "nukleer-enerji"
+    ]
+  },
+  {
+    "grade": 8,
+    "unit": 2,
+    "title": "DNA ve Genetik Kod · 2026–2027 önceki program",
+    "url": "https://ttkb.meb.gov.tr/meb_iys_dosyalar/2021_04/23113635_2021_lgs_konukazanimlari.pdf",
+    "modules": [
+      "dna"
+    ]
+  },
+  {
+    "grade": 8,
+    "unit": null,
+    "title": "Destekleyici içerik · doğrudan kazanım eşleştirmesi yok",
+    "url": "https://tymm.meb.gov.tr/taslak-cerceve-planlari/temel-egitim",
+    "modules": [
+      "hucre-bolunmesi"
+    ]
+  }
+]
